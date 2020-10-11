@@ -17,6 +17,12 @@
 
 
     <dependencies>
+        <!-- Spring Cloud alibaba Begin -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!-- Spring Cloud End-->
         <dependency>
             <groupId>com.corn.springcloud</groupId>
             <artifactId>common</artifactId>

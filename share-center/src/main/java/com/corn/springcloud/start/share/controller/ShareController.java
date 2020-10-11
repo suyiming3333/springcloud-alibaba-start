@@ -6,6 +6,8 @@ import com.corn.springcloud.start.share.entity.Share;
 import com.corn.springcloud.start.share.service.ShareService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,6 +33,18 @@ public class ShareController {
 
     @Autowired
     private RestTemplate restTemplate;
+
+    @Autowired
+    private LoadBalancerClient loadBalancerClient;
+
+    @GetMapping("/echo/app-name")
+    public String echoAppName(){
+        //Access through the combination of LoadBalanceClient and RestTemplate
+        ServiceInstance serviceInstance = loadBalancerClient.choose("user-service");
+        String path = String.format("http://%s:%s/users/%s",serviceInstance.getHost(),serviceInstance.getPort(),1);
+        System.out.println("request path:" +path);
+        return restTemplate.getForObject(path,String.class);
+    }
 
 
     @GetMapping("/{id}")
