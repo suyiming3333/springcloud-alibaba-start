@@ -1,13 +1,7 @@
-package com.corn.springcloud.start.share.dto;
+package com.corn.springcloud.start.dto;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
+
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
