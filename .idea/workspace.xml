@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="99f09f3e-860f-4fe5-ab07-eff66c2c938a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/controller/ShareController.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/Program Files/apache-maven-3.3.9" />
+        <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1iiy9LqbbVfvVy8rDRbig2zRJ9U" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.corn.springcloud.start.share.dto" />
+      <recent name="com.corn.springcloud.usercenter.generator" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\gitCode\springcloud-alibaba-start" />
+      <recent name="D:\work\gitCode\springcloud-alibaba-start\user-center\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ShareCenterApplication">
+    <configuration name="CodeGenerator (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.corn.springcloud.start.generator.CodeGenerator" />
+      <module name="share-center" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.corn.springcloud.start.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.corn.springcloud.start.generator.CodeGenerator" />
+      <module name="user-center" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.corn.springcloud.start.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserCenterApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-center" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.corn.springcloud.start.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.corn.springcloud.start" />
+      <option name="MAIN_CLASS_NAME" value="com.corn.springcloud.start.UserCenterApplicationTests" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShareCenterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="share-center" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.corn.springcloud.start.ShareCenterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserCenterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user-center" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.corn.springcloud.start.UserCenterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CodeGenerator (1)" />
+        <item itemvalue="JUnit.UserCenterApplicationTests.test" />
+        <item itemvalue="Application.CodeGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99f09f3e-860f-4fe5-ab07-eff66c2c938a" name="Default Changelist" comment="" />
+      <created>1602404554858</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602404554858</updated>
+      <workItem from="1602404559600" duration="8686000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1238" height="310" key="GridCell.Tab.0.bottom" timestamp="1602420583606">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state width="1238" height="310" key="GridCell.Tab.0.bottom/0.0.1280.770@0.0.1280.770" timestamp="1602420583606" />
+    <state width="1238" height="310" key="GridCell.Tab.0.center" timestamp="1602420583606">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state width="1238" height="310" key="GridCell.Tab.0.center/0.0.1280.770@0.0.1280.770" timestamp="1602420583606" />
+    <state width="1238" height="310" key="GridCell.Tab.0.left" timestamp="1602420583606">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state width="1238" height="310" key="GridCell.Tab.0.left/0.0.1280.770@0.0.1280.770" timestamp="1602420583606" />
+    <state width="1238" height="310" key="GridCell.Tab.0.right" timestamp="1602420583606">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state width="1238" height="310" key="GridCell.Tab.0.right/0.0.1280.770@0.0.1280.770" timestamp="1602420583606" />
+    <state width="1238" height="352" key="GridCell.Tab.1.bottom" timestamp="1602420601878">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state width="1238" height="352" key="GridCell.Tab.1.bottom/0.0.1280.770@0.0.1280.770" timestamp="1602420601878" />
+    <state width="1238" height="352" key="GridCell.Tab.1.center" timestamp="1602420601878">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state width="1238" height="352" key="GridCell.Tab.1.center/0.0.1280.770@0.0.1280.770" timestamp="1602420601878" />
+    <state width="1238" height="352" key="GridCell.Tab.1.left" timestamp="1602420601878">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state width="1238" height="352" key="GridCell.Tab.1.left/0.0.1280.770@0.0.1280.770" timestamp="1602420601878" />
+    <state width="1238" height="352" key="GridCell.Tab.1.right" timestamp="1602420601878">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state width="1238" height="352" key="GridCell.Tab.1.right/0.0.1280.770@0.0.1280.770" timestamp="1602420601878" />
+    <state width="1238" height="310" key="GridCell.Tab.2.bottom" timestamp="1602420583430">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state width="1238" height="310" key="GridCell.Tab.2.bottom/0.0.1280.770@0.0.1280.770" timestamp="1602420583430" />
+    <state width="1238" height="310" key="GridCell.Tab.2.center" timestamp="1602420583429">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state width="1238" height="310" key="GridCell.Tab.2.center/0.0.1280.770@0.0.1280.770" timestamp="1602420583429" />
+    <state width="1238" height="310" key="GridCell.Tab.2.left" timestamp="1602420583429">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state width="1238" height="310" key="GridCell.Tab.2.left/0.0.1280.770@0.0.1280.770" timestamp="1602420583429" />
+    <state width="1238" height="310" key="GridCell.Tab.2.right" timestamp="1602420583429">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state width="1238" height="310" key="GridCell.Tab.2.right/0.0.1280.770@0.0.1280.770" timestamp="1602420583429" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1602407913838">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.770@0.0.1280.770" timestamp="1602407913838" />
+    <state x="14" y="113" key="new project wizard" timestamp="1602404803756">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state x="14" y="113" key="new project wizard/0.0.1280.770@0.0.1280.770" timestamp="1602404803756" />
+  </component>
+</project>
