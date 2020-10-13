@@ -23,5 +23,10 @@ spring:
   cloud:
     nacos:
       server-addr: 127.0.0.1:8848
+      discovery:
+        namespace: 73be76f5-5fe5-4028-9fc5-d03c169a3cf8
+        cluster-name: b-center
+        metadata:
+          version: v2
 server:
-  port: 8080
+  port: 8082

@@ -21,5 +21,20 @@ spring:
   cloud:
     nacos:
       server-addr: 127.0.0.1:8848
+      discovery:
+        namespace: 73be76f5-5fe5-4028-9fc5-d03c169a3cf8
+        cluster-name: a-center
+        metadata:
+          version: v1
+          target-version: v1
 server:
   port: 8090
+#局部负载均衡配置(但报错)
+#user-service:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#饥饿加载
+ribbon:
+  eager-load:
+    enabled: true
+    clients: user-service

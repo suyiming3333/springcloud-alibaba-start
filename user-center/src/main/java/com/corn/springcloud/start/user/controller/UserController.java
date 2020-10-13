@@ -35,6 +35,7 @@ public class UserController {
     @GetMapping("/{id}")
     public User findById(@PathVariable Integer id){
         User user = userService.getById(id);
+        System.out.println("user-service invoked");
         return user;
     }
 }
