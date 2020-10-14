@@ -27,6 +27,6 @@ spring:
         namespace: 73be76f5-5fe5-4028-9fc5-d03c169a3cf8
         cluster-name: b-center
         metadata:
-          version: v2
+          version: v1
 server:
-  port: 8082
+  port: 8081

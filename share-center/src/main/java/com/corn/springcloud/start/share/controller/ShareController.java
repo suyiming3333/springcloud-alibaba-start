@@ -2,6 +2,8 @@ package com.corn.springcloud.start.share.controller;
 
 import com.corn.springcloud.start.dto.ShareDto;
 import com.corn.springcloud.start.dto.UserDto;
+import com.corn.springcloud.start.feignclient.TestUrlFeignClient;
+import com.corn.springcloud.start.feignclient.UserServiceFeignClient;
 import com.corn.springcloud.start.share.entity.Share;
 import com.corn.springcloud.start.share.service.ShareService;
 import lombok.extern.slf4j.Slf4j;
@@ -46,6 +48,12 @@ public class ShareController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
+    @Autowired
+    private UserServiceFeignClient userServiceFeignClient;
+
+    @Autowired
+    private TestUrlFeignClient testUrlFeignClient;
+
     @GetMapping("/echo/app-name")
     public String echoAppName(){
         //Access through the combination of LoadBalanceClient and RestTemplate
@@ -78,18 +86,26 @@ public class ShareController {
 //        ResponseEntity<UserDto> entity = restTemplate.getForEntity(path, UserDto.class,share.getUserId());
 
         //通过user-service服务id使用远程调用(已实现负载均衡)
-        ResponseEntity<UserDto> entity = restTemplate.getForEntity("http://user-service/users/{id}", UserDto.class,share.getUserId());
+//        ResponseEntity<UserDto> entity = restTemplate.getForEntity("http://user-service/users/{id}", UserDto.class,share.getUserId());
+
+        UserDto userDto = userServiceFeignClient.findById(share.getUserId());
         ShareDto shareDto = new ShareDto();
 
         BeanUtils.copyProperties(share,shareDto);
-        if(200 == entity.getStatusCodeValue()){
-            shareDto.setWxNickname(entity.getBody().getWxNickname());
-        }else{
-            shareDto.setWxNickname("匿名用户");
-        }
+        shareDto.setWxNickname(userDto.getWxNickname());
+//        if(200 == entity.getStatusCodeValue()){
+//            shareDto.setWxNickname(entity.getBody().getWxNickname());
+//        }else{
+//            shareDto.setWxNickname("匿名用户");
+//        }
 
         return shareDto;
     }
 
+
+    @GetMapping("/baidu")
+    public String baiduIndex() {
+        return this.testUrlFeignClient.baiduIndex();
+    }
 }
 

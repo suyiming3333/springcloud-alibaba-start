@@ -27,6 +27,9 @@ spring:
         metadata:
           version: v1
           target-version: v1
+  ##表示后发现的bean会覆盖之前相同名称的bean,避免冲突
+  main:
+    allow-bean-definition-overriding: true
 server:
   port: 8090
 #局部负载均衡配置(但报错)
@@ -38,3 +41,26 @@ ribbon:
   eager-load:
     enabled: true
     clients: user-service
+##feign的日志是建立在 debug日志模式的基础上的
+logging:
+  level:
+    com:
+      corn:
+        springcloud:
+          start:
+            feignclient: debug
+feign:
+  client:
+    config:
+      #全局配置
+      default:
+        loggerLevel: BASIC
+      ##针对特定的client设置日志级别
+      user-service:
+        loggerLevel: FULL
+  httpclient:
+    enabled: true
+    # feign 最大连接数
+    max-connections: 200
+    # feign 单个路径(mapping)的最大连接数
+    max-connections-per-route: 1
