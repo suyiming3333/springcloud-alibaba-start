@@ -7,5 +7,5 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface UserServiceInterface {
 
     @GetMapping("/{id}")
-    UserDto findById(@PathVariable Integer id);
+    UserDto findById(@PathVariable(value = "id") Integer id);
 }
