@@ -1,5 +1,7 @@
 package com.corn.springcloud.start.share.service.impl;
 
+import com.alibaba.csp.sentinel.EntryType;
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.corn.springcloud.start.share.entity.Share;
 import com.corn.springcloud.start.share.mapper.ShareMapper;
 import com.corn.springcloud.start.share.service.ShareService;
@@ -17,4 +19,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class ShareServiceImpl extends ServiceImpl<ShareMapper, Share> implements ShareService {
 
+
+    @SentinelResource(value = "test-service",entryType = EntryType.IN)
+    @Override
+    public void testService(String s) {
+        System.out.println("tes -ervice invoke:"+s);
+    }
 }

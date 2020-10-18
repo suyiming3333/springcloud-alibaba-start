@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password:
-    url: jdbc:mysql://127.0.0.1:3306/testdb?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://127.0.0.1:3306/sc_share_center?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       # 连接池最大连接数
@@ -29,10 +29,15 @@ spring:
           target-version: v1
 
     ##sentinel控制台声明
+    filter:
+      #打开/关闭掉对Spring MVC端点的保护
+      enabled: true
     sentinel:
       transport:
         port: 8719
         dashboard: localhost:8080
+      ##需要设置为false，否则簇点链路会不正常，流控模式里面的链路会不生效
+      web-context-unify: false
   ##表示后发现的bean会覆盖之前相同名称的bean,避免冲突
   main:
     allow-bean-definition-overriding: true
@@ -56,6 +61,9 @@ logging:
           start:
             feignclient: debug
 feign:
+  sentinel:
+    ##feign启用sentinel
+    enabled: true
   client:
     config:
       #全局配置
@@ -76,3 +84,7 @@ management:
     web:
       exposure:
         include: '*'
+resttemplate:
+  sentinel:
+    ##开启@SentinelRestTempalte注解
+    enabled: true

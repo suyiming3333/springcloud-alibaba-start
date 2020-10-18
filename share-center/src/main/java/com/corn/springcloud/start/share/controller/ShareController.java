@@ -1,9 +1,19 @@
 package com.corn.springcloud.start.share.controller;
 
+import com.alibaba.csp.sentinel.Entry;
+import com.alibaba.csp.sentinel.ResourceTypeConstants;
+import com.alibaba.csp.sentinel.SphU;
+import com.alibaba.csp.sentinel.Tracer;
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.alibaba.csp.sentinel.context.ContextUtil;
+import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.alibaba.csp.sentinel.util.StringUtil;
 import com.corn.springcloud.start.dto.ShareDto;
 import com.corn.springcloud.start.dto.UserDto;
 import com.corn.springcloud.start.feignclient.TestUrlFeignClient;
 import com.corn.springcloud.start.feignclient.UserServiceFeignClient;
+import com.corn.springcloud.start.sentinel.BlockHandlerClass;
+import com.corn.springcloud.start.sentinel.FallbackClass;
 import com.corn.springcloud.start.share.entity.Share;
 import com.corn.springcloud.start.share.service.ShareService;
 import lombok.extern.slf4j.Slf4j;
@@ -13,11 +23,8 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
@@ -105,7 +112,94 @@ public class ShareController {
 
     @GetMapping("/baidu")
     public String baiduIndex() {
-        return this.testUrlFeignClient.baiduIndex();
+//        return this.testUrlFeignClient.baiduIndex();
+        shareService.testService("a");
+        return "baidu";
+    }
+
+
+    @GetMapping("/testa")
+    public String test() {
+        shareService.testService("a");
+        return "testa";
+    }
+
+    @GetMapping("/testb")
+    public String testb() {
+        shareService.testService("b");
+        return "testb";
+    }
+
+
+    /**
+     * 测试热点规则配置
+     * @param a
+     * @param b
+     * @return
+     */
+    @GetMapping("/testHot")
+    @SentinelResource("hot")
+    public String testHot(@RequestParam(required = false) String a,@RequestParam(required = false) String b) {
+        return a+":"+b;
+    }
+
+
+    @GetMapping("testSentinelApi")
+    public String testSentinelApi(@RequestParam(required = false) String p){
+        String resourceName = "test-sentinel-api";
+        //设置调用来源
+        ContextUtil.enter(resourceName,"test");
+
+        Entry entry = null;
+
+        try {
+            //定义资源、设置要保护的资源
+            entry = SphU.entry(resourceName);
+
+            if(StringUtil.isBlank(p)){
+                //异常统计只针对BlockException，所以这里无论报错多少次，都不降级，需要手动统计
+                throw new IllegalArgumentException("参数为空");
+            }
+            return p;
+
+        }
+        catch (IllegalArgumentException e){
+            //sentinel-api手动统计异常
+            Tracer.trace(e);
+            return "参数为空";
+        }
+        catch (BlockException e) {
+            System.out.println("被限流或者降级了");
+            e.printStackTrace();
+            return "被限流或者降级了";
+        }finally {
+            if(entry!=null){
+                entry.exit();
+            }
+            ContextUtil.exit();
+        }
+
+    }
+
+    /**
+     * @SentinelResource 统计throwable异常，不需要手动trace
+     * @param p
+     * @return
+     */
+    @GetMapping("testSentinelResource")
+    @SentinelResource(
+            value = "testSentinelResource",
+            blockHandler = "block",
+            blockHandlerClass = BlockHandlerClass.class,
+            fallbackClass = FallbackClass.class,
+            fallback = "fallback")
+    public String testSentinelResource(@RequestParam(required = false) String p){
+
+            if(StringUtil.isBlank(p)){
+                //@SentinelResource 统计throwable异常，不需要手动trace手动统计
+                throw new IllegalArgumentException("参数为空");
+            }
+            return p;
     }
 }
 

@@ -13,4 +13,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ShareService extends IService<Share> {
 
+    void testService(String s);
+
 }

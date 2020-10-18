@@ -1,8 +1,12 @@
 package com.corn.springcloud.start;
 
+import com.alibaba.cloud.sentinel.annotation.SentinelRestTemplate;
 import com.corn.springcloud.start.config.NacosFinalRule;
 import com.corn.springcloud.start.config.NacosSameClusterWeightedRule;
 import com.corn.springcloud.start.config.NacosWeightedRule;
+import com.corn.springcloud.start.sentinel.BlockHandlerClass;
+import com.corn.springcloud.start.sentinel.FallbackClass;
+import com.corn.springcloud.start.sentinel.SintinelRestTemplateErrorHandler;
 import com.netflix.loadbalancer.*;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -21,6 +25,12 @@ public class ShareCenterApplication {
 
     @Bean
     @LoadBalanced
+    @SentinelRestTemplate(
+            blockHandlerClass = SintinelRestTemplateErrorHandler.class,
+            blockHandler = "block",
+            fallbackClass = SintinelRestTemplateErrorHandler.class,
+            fallback = "fallback"
+    )
     public RestTemplate restTemplate(){
         return new RestTemplate();
     }
@@ -46,6 +56,25 @@ public class ShareCenterApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ShareCenterApplication.class, args);
+//        new Thread(new TestThread()).start();
     }
 
+
+    static class TestThread implements Runnable{
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        @Override
+        public void run() {
+            while(true){
+                restTemplate.getForObject("http://localhost:8090/shares/baidu",String.class);
+                System.out.println("invoke 1");
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 }
