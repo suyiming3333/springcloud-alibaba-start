@@ -3,13 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="99f09f3e-860f-4fe5-ab07-eff66c2c938a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/api/UserServiceInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/api/UserServiceInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/ShareCenterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/ShareCenterApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/feignclient/UserServiceFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/feignclient/UserServiceFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/controller/ShareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/controller/ShareController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/corn/springcloud/start/user/api/UserServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/corn/springcloud/start/user/api/UserServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/feignclient/UserServiceFeignClientFallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/feignclient/UserServiceFeignClientFallBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/feignclient/UserServiceFeignClientFallBackFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/feignclient/UserServiceFeignClientFallBackFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/service/ShareService.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/service/ShareService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/service/impl/ShareServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/service/impl/ShareServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-center/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/resources/mapper/user/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/resources/mapper/user/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -54,24 +58,44 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/user-center/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/src/main/java/com/corn/springcloud/start/dto" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.corn.springcloud.start.enums" />
       <recent name="ribbonconfiguration" />
       <recent name="com.corn.springcloud.start.config" />
       <recent name="com.corn.springcloud.start.share.dto" />
       <recent name="com.corn.springcloud.usercenter.generator" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\gitCode\springcloud-alibaba-start\common\src\main\java\com\corn\springcloud\start\dto" />
       <recent name="D:\work\gitCode\springcloud-alibaba-start\user-center\src\main\java" />
       <recent name="D:\work\gitCode\springcloud-alibaba-start" />
       <recent name="D:\work\gitCode\springcloud-alibaba-start\user-center\src\main\resources" />
     </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 12 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 12 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="user-center" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="Found 12 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="share-center" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.ShareCenterApplication">
     <configuration name="CodeGenerator (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -161,7 +185,9 @@
       <workItem from="1602513216061" duration="5397000" />
       <workItem from="1602591786575" duration="9731000" />
       <workItem from="1602681952777" duration="4464000" />
-      <workItem from="1602982395295" duration="5035000" />
+      <workItem from="1602982395295" duration="6513000" />
+      <workItem from="1603198765390" duration="3148000" />
+      <workItem from="1603204522980" duration="3267000" />
     </task>
     <servers />
   </component>
@@ -181,74 +207,74 @@
       <screen x="0" y="0" width="1280" height="770" />
     </state>
     <state x="96" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.770@0.0.1280.770" timestamp="1602593923975" />
-    <state x="446" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1602987786701">
+    <state x="446" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1603207775684">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state x="446" y="94" key="#com.intellij.ide.util.MemberChooser/0.0.1280.770@0.0.1280.770" timestamp="1602987786701" />
-    <state width="1238" height="357" key="GridCell.Tab.0.bottom" timestamp="1602988011655">
+    <state x="446" y="94" key="#com.intellij.ide.util.MemberChooser/0.0.1280.770@0.0.1280.770" timestamp="1603207775684" />
+    <state width="1238" height="447" key="GridCell.Tab.0.bottom" timestamp="1603208023054">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="357" key="GridCell.Tab.0.bottom/0.0.1280.770@0.0.1280.770" timestamp="1602988011655" />
-    <state width="1238" height="357" key="GridCell.Tab.0.center" timestamp="1602988011655">
+    <state width="1238" height="447" key="GridCell.Tab.0.bottom/0.0.1280.770@0.0.1280.770" timestamp="1603208023054" />
+    <state width="1238" height="447" key="GridCell.Tab.0.center" timestamp="1603208023051">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="357" key="GridCell.Tab.0.center/0.0.1280.770@0.0.1280.770" timestamp="1602988011655" />
-    <state width="1238" height="357" key="GridCell.Tab.0.left" timestamp="1602988011654">
+    <state width="1238" height="447" key="GridCell.Tab.0.center/0.0.1280.770@0.0.1280.770" timestamp="1603208023051" />
+    <state width="1238" height="447" key="GridCell.Tab.0.left" timestamp="1603208023045">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="357" key="GridCell.Tab.0.left/0.0.1280.770@0.0.1280.770" timestamp="1602988011654" />
-    <state width="1238" height="357" key="GridCell.Tab.0.right" timestamp="1602988011655">
+    <state width="1238" height="447" key="GridCell.Tab.0.left/0.0.1280.770@0.0.1280.770" timestamp="1603208023045" />
+    <state width="1238" height="447" key="GridCell.Tab.0.right" timestamp="1603208023054">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="357" key="GridCell.Tab.0.right/0.0.1280.770@0.0.1280.770" timestamp="1602988011655" />
-    <state width="1238" height="357" key="GridCell.Tab.1.bottom" timestamp="1602988011456">
+    <state width="1238" height="447" key="GridCell.Tab.0.right/0.0.1280.770@0.0.1280.770" timestamp="1603208023054" />
+    <state width="1238" height="447" key="GridCell.Tab.1.bottom" timestamp="1603208023056">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="357" key="GridCell.Tab.1.bottom/0.0.1280.770@0.0.1280.770" timestamp="1602988011456" />
-    <state width="1238" height="357" key="GridCell.Tab.1.center" timestamp="1602988011455">
+    <state width="1238" height="447" key="GridCell.Tab.1.bottom/0.0.1280.770@0.0.1280.770" timestamp="1603208023056" />
+    <state width="1238" height="447" key="GridCell.Tab.1.center" timestamp="1603208023055">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="357" key="GridCell.Tab.1.center/0.0.1280.770@0.0.1280.770" timestamp="1602988011455" />
-    <state width="1238" height="357" key="GridCell.Tab.1.left" timestamp="1602988011455">
+    <state width="1238" height="447" key="GridCell.Tab.1.center/0.0.1280.770@0.0.1280.770" timestamp="1603208023055" />
+    <state width="1238" height="447" key="GridCell.Tab.1.left" timestamp="1603208023054">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="357" key="GridCell.Tab.1.left/0.0.1280.770@0.0.1280.770" timestamp="1602988011455" />
-    <state width="1238" height="357" key="GridCell.Tab.1.right" timestamp="1602988011456">
+    <state width="1238" height="447" key="GridCell.Tab.1.left/0.0.1280.770@0.0.1280.770" timestamp="1603208023054" />
+    <state width="1238" height="447" key="GridCell.Tab.1.right" timestamp="1603208023055">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="357" key="GridCell.Tab.1.right/0.0.1280.770@0.0.1280.770" timestamp="1602988011456" />
-    <state width="1238" height="357" key="GridCell.Tab.2.bottom" timestamp="1602988011456">
+    <state width="1238" height="447" key="GridCell.Tab.1.right/0.0.1280.770@0.0.1280.770" timestamp="1603208023055" />
+    <state width="1238" height="447" key="GridCell.Tab.2.bottom" timestamp="1603208023057">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="357" key="GridCell.Tab.2.bottom/0.0.1280.770@0.0.1280.770" timestamp="1602988011456" />
-    <state width="1238" height="357" key="GridCell.Tab.2.center" timestamp="1602988011456">
+    <state width="1238" height="447" key="GridCell.Tab.2.bottom/0.0.1280.770@0.0.1280.770" timestamp="1603208023057" />
+    <state width="1238" height="447" key="GridCell.Tab.2.center" timestamp="1603208023056">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="357" key="GridCell.Tab.2.center/0.0.1280.770@0.0.1280.770" timestamp="1602988011456" />
-    <state width="1238" height="357" key="GridCell.Tab.2.left" timestamp="1602988011456">
+    <state width="1238" height="447" key="GridCell.Tab.2.center/0.0.1280.770@0.0.1280.770" timestamp="1603208023056" />
+    <state width="1238" height="447" key="GridCell.Tab.2.left" timestamp="1603208023056">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="357" key="GridCell.Tab.2.left/0.0.1280.770@0.0.1280.770" timestamp="1602988011456" />
-    <state width="1238" height="357" key="GridCell.Tab.2.right" timestamp="1602988011456">
+    <state width="1238" height="447" key="GridCell.Tab.2.left/0.0.1280.770@0.0.1280.770" timestamp="1603208023056" />
+    <state width="1238" height="447" key="GridCell.Tab.2.right" timestamp="1603208023057">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="357" key="GridCell.Tab.2.right/0.0.1280.770@0.0.1280.770" timestamp="1602988011456" />
+    <state width="1238" height="447" key="GridCell.Tab.2.right/0.0.1280.770@0.0.1280.770" timestamp="1603208023057" />
     <state x="171" y="44" key="Maven.ArtifactSearchDialog" timestamp="1602428446349">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
     <state x="171" y="44" key="Maven.ArtifactSearchDialog/0.0.1280.770@0.0.1280.770" timestamp="1602428446349" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1602407913838">
+    <state x="121" y="0" key="SettingsEditor" timestamp="1603204485032">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.770@0.0.1280.770" timestamp="1602407913838" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.770@0.0.1280.770" timestamp="1603204485032" />
     <state x="93" y="93" width="1093" height="583" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602921554643">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
     <state x="93" y="93" width="1093" height="583" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.770@0.0.1280.770" timestamp="1602921554643" />
-    <state x="336" y="214" key="com.intellij.ide.util.TipDialog" timestamp="1602982398055">
+    <state x="336" y="214" key="com.intellij.ide.util.TipDialog" timestamp="1603204526001">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state x="336" y="214" key="com.intellij.ide.util.TipDialog/0.0.1280.770@0.0.1280.770" timestamp="1602982398055" />
+    <state x="336" y="214" key="com.intellij.ide.util.TipDialog/0.0.1280.770@0.0.1280.770" timestamp="1603204526001" />
     <state x="14" y="113" key="new project wizard" timestamp="1602423835465">
       <screen x="0" y="0" width="1280" height="770" />
     </state>

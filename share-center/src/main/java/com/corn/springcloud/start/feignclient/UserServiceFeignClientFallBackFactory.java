@@ -18,6 +18,11 @@ public class UserServiceFeignClientFallBackFactory implements FallbackFactory<Us
                 userDto.setWxNickname("默认的用户");
                 return userDto;
             }
+
+            @Override
+            public void addBonus(Integer userId, int bonus) {
+
+            }
         };
     }
 }

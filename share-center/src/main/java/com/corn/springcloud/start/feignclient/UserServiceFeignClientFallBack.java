@@ -11,4 +11,9 @@ public class UserServiceFeignClientFallBack implements UserServiceFeignClient{
         userDto.setWxNickname("默认的用户");
         return userDto;
     }
+
+    @Override
+    public void addBonus(Integer userId, int bonus) {
+
+    }
 }
