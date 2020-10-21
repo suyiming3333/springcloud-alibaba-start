@@ -88,3 +88,9 @@ resttemplate:
   sentinel:
     ##开启@SentinelRestTempalte注解
     enabled: true
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    ##好像不指定group会报错
+    group: test-group

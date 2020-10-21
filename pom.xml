@@ -39,6 +39,7 @@
     <velocity.version>2.2</velocity.version>
     <lombok.version>1.18.12</lombok.version>
     <mysql.version>8.0.21</mysql.version>
+    <rocketmq.version>2.1.1</rocketmq.version>
   </properties>
 
   <dependencyManagement>
@@ -83,7 +84,11 @@
         <version>${velocity.version}</version>
       </dependency>
       <!--mybatis plus依赖 end-->
-
+      <dependency>
+        <groupId>org.apache.rocketmq</groupId>
+        <artifactId>rocketmq-spring-boot-starter</artifactId>
+        <version>${rocketmq.version}</version>
+      </dependency>
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>

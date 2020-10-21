@@ -4,11 +4,13 @@ import com.alibaba.csp.sentinel.EntryType;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.corn.springcloud.start.dto.ShareAuditDto;
 import com.corn.springcloud.start.dto.ShareDto;
+import com.corn.springcloud.start.dto.UserAddBonusMsgDTO;
 import com.corn.springcloud.start.feignclient.UserServiceFeignClient;
 import com.corn.springcloud.start.share.entity.Share;
 import com.corn.springcloud.start.share.mapper.ShareMapper;
 import com.corn.springcloud.start.share.service.ShareService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +32,9 @@ public class ShareServiceImpl extends ServiceImpl<ShareMapper, Share> implements
 
     @Autowired
     private UserServiceFeignClient userServiceFeignClient;
+
+    @Autowired
+    private RocketMQTemplate rocketMQTemplate;
 
 
     @SentinelResource(value = "test-service",entryType = EntryType.IN)
@@ -55,7 +60,11 @@ public class ShareServiceImpl extends ServiceImpl<ShareMapper, Share> implements
         //分享内容通过，添加积分(次流程)
         //异步执行 1、asyncRestTemplate 2、@Async 3、webclient(spring5.0引入) 4、MQ
         if(Objects.equals("PASS",shareAuditDto.getAuditStatusEnum().toString())){
-            userServiceFeignClient.addBonus(id,500);
+//            userServiceFeignClient.addBonus(id,500);
+            //发送消息
+            rocketMQTemplate.convertAndSend(
+                    "add-bonus",
+                    UserAddBonusMsgDTO.builder().userId(id).bonus(500).build());
         }
         return null;
     }
