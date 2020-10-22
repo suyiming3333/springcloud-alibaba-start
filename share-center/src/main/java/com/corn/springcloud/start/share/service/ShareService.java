@@ -18,4 +18,7 @@ public interface ShareService extends IService<Share> {
     void testService(String s);
 
     ShareDto auditById(Integer id, ShareAuditDto shareAuditDto);
+
+    ShareDto auditByIdInDBWithRocketMqLog(Integer id, ShareAuditDto shareAuditDto, String transactionId);
+
 }
