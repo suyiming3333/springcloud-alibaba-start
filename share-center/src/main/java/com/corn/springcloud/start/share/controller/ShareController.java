@@ -22,7 +22,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.client.RestTemplate;
@@ -60,6 +62,9 @@ public class ShareController {
 
     @Autowired
     private TestUrlFeignClient testUrlFeignClient;
+
+    @Autowired
+    private Source source;
 
     @GetMapping("/echo/app-name")
     public String echoAppName(){
@@ -200,6 +205,12 @@ public class ShareController {
                 throw new IllegalArgumentException("参数为空");
             }
             return p;
+    }
+
+    @GetMapping("/testSourceStream")
+    public String testSourceStream() {
+        source.output().send(MessageBuilder.withPayload("test message").build());
+        return "testSourceStream ok";
     }
 }
 

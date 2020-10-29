@@ -38,6 +38,14 @@ spring:
         dashboard: localhost:8080
       ##需要设置为false，否则簇点链路会不正常，流控模式里面的链路会不生效
       web-context-unify: false
+    ##cloud stream的配置
+    stream:
+      rocketmq:
+        binder:
+          name-server: 127.0.0.1:9876
+      bindings:
+        output:
+          destination: stream-test-topic
   ##表示后发现的bean会覆盖之前相同名称的bean,避免冲突
   main:
     allow-bean-definition-overriding: true
@@ -84,6 +92,9 @@ management:
     web:
       exposure:
         include: '*'
+  endpoint:
+    health:
+      show-details: always
 resttemplate:
   sentinel:
     ##开启@SentinelRestTempalte注解

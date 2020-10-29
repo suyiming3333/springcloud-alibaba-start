@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageHeaders;
 
-@RocketMQTransactionListener
+@RocketMQTransactionListener(txProducerGroup = "tx-add-bonus-group")
 @Slf4j
 public class AddBonusTransactionListener implements RocketMQLocalTransactionListener {
 

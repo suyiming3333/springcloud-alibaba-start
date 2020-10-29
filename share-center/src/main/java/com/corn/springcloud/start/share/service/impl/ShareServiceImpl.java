@@ -62,7 +62,7 @@ public class ShareServiceImpl extends ServiceImpl<ShareMapper, Share> implements
         if(Objects.equals("PASS",shareAuditDto.getAuditStatusEnum().toString())){
             //发送半消息
             rocketMQTemplate.sendMessageInTransaction(
-//                    "tx-add-bonus-group",
+                    "tx-add-bonus-group",
                     "add-bonus",
                     MessageBuilder
                             .withPayload(UserAddBonusMsgDTO.builder().userId(id).bonus(500).build())
