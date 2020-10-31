@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99f09f3e-860f-4fe5-ab07-eff66c2c938a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-center/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/ShareCenterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/ShareCenterApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/rocketmq/AddBonusTransactionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/rocketmq/AddBonusTransactionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/controller/ShareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/controller/ShareController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/service/impl/ShareServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/service/impl/ShareServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-center/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/share-center/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-center/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/UserCenterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/UserCenterApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-center/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +91,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserCenterApplication">
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
     <configuration name="CodeGenerator (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.corn.springcloud.start.generator.CodeGenerator" />
       <module name="share-center" />
@@ -140,6 +134,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.corn.springcloud.gateway.start.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShareCenterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="share-center" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.corn.springcloud.start.ShareCenterApplication" />
@@ -161,6 +162,7 @@
       <item itemvalue="JUnit.UserCenterApplicationTests.test" />
       <item itemvalue="Spring Boot.ShareCenterApplication" />
       <item itemvalue="Spring Boot.UserCenterApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -191,7 +193,9 @@
       <workItem from="1603292742217" duration="2126000" />
       <workItem from="1603370610661" duration="10460000" />
       <workItem from="1603978885765" duration="970000" />
-      <workItem from="1603979883991" duration="6015000" />
+      <workItem from="1603979883991" duration="6538000" />
+      <workItem from="1604068153557" duration="3224000" />
+      <workItem from="1604107250520" duration="6732000" />
     </task>
     <servers />
   </component>
@@ -211,62 +215,62 @@
       <screen x="0" y="0" width="1280" height="770" />
     </state>
     <state x="96" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.770@0.0.1280.770" timestamp="1602593923975" />
-    <state x="446" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1603373226561">
+    <state x="446" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1604111508854">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state x="446" y="94" key="#com.intellij.ide.util.MemberChooser/0.0.1280.770@0.0.1280.770" timestamp="1603373226561" />
+    <state x="446" y="94" key="#com.intellij.ide.util.MemberChooser/0.0.1280.770@0.0.1280.770" timestamp="1604111508854" />
     <state x="362" y="259" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1603980481890">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
     <state x="362" y="259" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.770@0.0.1280.770" timestamp="1603980481890" />
-    <state width="1238" height="367" key="GridCell.Tab.0.bottom" timestamp="1603985512845">
+    <state width="1238" height="426" key="GridCell.Tab.0.bottom" timestamp="1604112665035">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="367" key="GridCell.Tab.0.bottom/0.0.1280.770@0.0.1280.770" timestamp="1603985512845" />
-    <state width="1238" height="367" key="GridCell.Tab.0.center" timestamp="1603985512844">
+    <state width="1238" height="426" key="GridCell.Tab.0.bottom/0.0.1280.770@0.0.1280.770" timestamp="1604112665035" />
+    <state width="1238" height="426" key="GridCell.Tab.0.center" timestamp="1604112665034">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="367" key="GridCell.Tab.0.center/0.0.1280.770@0.0.1280.770" timestamp="1603985512844" />
-    <state width="1238" height="367" key="GridCell.Tab.0.left" timestamp="1603985512844">
+    <state width="1238" height="426" key="GridCell.Tab.0.center/0.0.1280.770@0.0.1280.770" timestamp="1604112665034" />
+    <state width="1238" height="426" key="GridCell.Tab.0.left" timestamp="1604112665034">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="367" key="GridCell.Tab.0.left/0.0.1280.770@0.0.1280.770" timestamp="1603985512844" />
-    <state width="1238" height="367" key="GridCell.Tab.0.right" timestamp="1603985512844">
+    <state width="1238" height="426" key="GridCell.Tab.0.left/0.0.1280.770@0.0.1280.770" timestamp="1604112665034" />
+    <state width="1238" height="426" key="GridCell.Tab.0.right" timestamp="1604112665035">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="367" key="GridCell.Tab.0.right/0.0.1280.770@0.0.1280.770" timestamp="1603985512844" />
-    <state width="1238" height="367" key="GridCell.Tab.1.bottom" timestamp="1603985512845">
+    <state width="1238" height="426" key="GridCell.Tab.0.right/0.0.1280.770@0.0.1280.770" timestamp="1604112665035" />
+    <state width="1238" height="426" key="GridCell.Tab.1.bottom" timestamp="1604112664779">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="367" key="GridCell.Tab.1.bottom/0.0.1280.770@0.0.1280.770" timestamp="1603985512845" />
-    <state width="1238" height="367" key="GridCell.Tab.1.center" timestamp="1603985512845">
+    <state width="1238" height="426" key="GridCell.Tab.1.bottom/0.0.1280.770@0.0.1280.770" timestamp="1604112664779" />
+    <state width="1238" height="426" key="GridCell.Tab.1.center" timestamp="1604112664779">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="367" key="GridCell.Tab.1.center/0.0.1280.770@0.0.1280.770" timestamp="1603985512845" />
-    <state width="1238" height="367" key="GridCell.Tab.1.left" timestamp="1603985512845">
+    <state width="1238" height="426" key="GridCell.Tab.1.center/0.0.1280.770@0.0.1280.770" timestamp="1604112664779" />
+    <state width="1238" height="426" key="GridCell.Tab.1.left" timestamp="1604112664779">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="367" key="GridCell.Tab.1.left/0.0.1280.770@0.0.1280.770" timestamp="1603985512845" />
-    <state width="1238" height="367" key="GridCell.Tab.1.right" timestamp="1603985512845">
+    <state width="1238" height="426" key="GridCell.Tab.1.left/0.0.1280.770@0.0.1280.770" timestamp="1604112664779" />
+    <state width="1238" height="426" key="GridCell.Tab.1.right" timestamp="1604112664779">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="367" key="GridCell.Tab.1.right/0.0.1280.770@0.0.1280.770" timestamp="1603985512845" />
-    <state width="1238" height="367" key="GridCell.Tab.2.bottom" timestamp="1603985512846">
+    <state width="1238" height="426" key="GridCell.Tab.1.right/0.0.1280.770@0.0.1280.770" timestamp="1604112664779" />
+    <state width="1238" height="426" key="GridCell.Tab.2.bottom" timestamp="1604112664779">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="367" key="GridCell.Tab.2.bottom/0.0.1280.770@0.0.1280.770" timestamp="1603985512846" />
-    <state width="1238" height="367" key="GridCell.Tab.2.center" timestamp="1603985512846">
+    <state width="1238" height="426" key="GridCell.Tab.2.bottom/0.0.1280.770@0.0.1280.770" timestamp="1604112664779" />
+    <state width="1238" height="426" key="GridCell.Tab.2.center" timestamp="1604112664779">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="367" key="GridCell.Tab.2.center/0.0.1280.770@0.0.1280.770" timestamp="1603985512846" />
-    <state width="1238" height="367" key="GridCell.Tab.2.left" timestamp="1603985512846">
+    <state width="1238" height="426" key="GridCell.Tab.2.center/0.0.1280.770@0.0.1280.770" timestamp="1604112664779" />
+    <state width="1238" height="426" key="GridCell.Tab.2.left" timestamp="1604112664779">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="367" key="GridCell.Tab.2.left/0.0.1280.770@0.0.1280.770" timestamp="1603985512846" />
-    <state width="1238" height="367" key="GridCell.Tab.2.right" timestamp="1603985512846">
+    <state width="1238" height="426" key="GridCell.Tab.2.left/0.0.1280.770@0.0.1280.770" timestamp="1604112664779" />
+    <state width="1238" height="426" key="GridCell.Tab.2.right" timestamp="1604112664779">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state width="1238" height="367" key="GridCell.Tab.2.right/0.0.1280.770@0.0.1280.770" timestamp="1603985512846" />
+    <state width="1238" height="426" key="GridCell.Tab.2.right/0.0.1280.770@0.0.1280.770" timestamp="1604112664779" />
     <state x="171" y="44" key="Maven.ArtifactSearchDialog" timestamp="1602428446349">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
@@ -279,18 +283,18 @@
       <screen x="0" y="0" width="1280" height="770" />
     </state>
     <state x="93" y="93" width="1093" height="583" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.770@0.0.1280.770" timestamp="1602921554643" />
-    <state x="336" y="214" key="com.intellij.ide.util.TipDialog" timestamp="1603979888889">
+    <state x="336" y="214" key="com.intellij.ide.util.TipDialog" timestamp="1604107252217">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state x="336" y="214" key="com.intellij.ide.util.TipDialog/0.0.1280.770@0.0.1280.770" timestamp="1603979888889" />
+    <state x="336" y="214" key="com.intellij.ide.util.TipDialog/0.0.1280.770@0.0.1280.770" timestamp="1604107252217" />
     <state x="329" y="139" width="620" height="490" key="find.popup" timestamp="1603984809210">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
     <state x="329" y="139" width="620" height="490" key="find.popup/0.0.1280.770@0.0.1280.770" timestamp="1603984809210" />
-    <state x="14" y="113" key="new project wizard" timestamp="1602423835465">
+    <state x="14" y="133" key="new project wizard" timestamp="1604068930063">
       <screen x="0" y="0" width="1280" height="770" />
     </state>
-    <state x="14" y="113" key="new project wizard/0.0.1280.770@0.0.1280.770" timestamp="1602423835465" />
+    <state x="14" y="133" key="new project wizard/0.0.1280.770@0.0.1280.770" timestamp="1604068930063" />
     <state x="307" y="96" width="672" height="678" key="search.everywhere.popup" timestamp="1603380185370">
       <screen x="0" y="0" width="1280" height="770" />
     </state>

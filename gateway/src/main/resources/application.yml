@@ -1,0 +1,37 @@
+server:
+  port: 8000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+spring:
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        namespace: 73be76f5-5fe5-4028-9fc5-d03c169a3cf8
+    gateway:
+      discovery:
+        locator:
+          #gateway通过服务发现组件找到其他微服务
+          enabled: true
+      routes:
+        - id: test_router
+          ##请求转发的目的地址
+          uri: lb://user-service
+          ##谓词条件满足的话
+          predicates:
+            - TimeBetween=上午9:00,下午10:00
+#            - After=2018-12-25T14:33:47.789+08:00
+          filters:
+            - PreLog=su,yiming
+            - AddRequestHeader=X-Request-Foo,Bar
+      default-filters:
+        - PreLog=su,yiming
+
+  application:
+    name: gateway-service
