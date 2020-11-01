@@ -1,6 +1,6 @@
 package com.corn.springcloud.start.feignclient;
 
-import com.corn.springcloud.start.dto.UserDto;
+import com.corn.springcloud.start.user.dto.UserDto;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

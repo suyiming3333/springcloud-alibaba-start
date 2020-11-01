@@ -1,4 +1,6 @@
-
+wx:
+  appId: wxa6d068d78e96683c
+  appSecret: c194cedf7a0af4a7296ebe31028c3baa
 
 spring:
   datasource:

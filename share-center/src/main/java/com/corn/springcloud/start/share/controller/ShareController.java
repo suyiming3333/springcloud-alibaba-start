@@ -1,7 +1,6 @@
 package com.corn.springcloud.start.share.controller;
 
 import com.alibaba.csp.sentinel.Entry;
-import com.alibaba.csp.sentinel.ResourceTypeConstants;
 import com.alibaba.csp.sentinel.SphU;
 import com.alibaba.csp.sentinel.Tracer;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
@@ -9,7 +8,7 @@ import com.alibaba.csp.sentinel.context.ContextUtil;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.csp.sentinel.util.StringUtil;
 import com.corn.springcloud.start.dto.ShareDto;
-import com.corn.springcloud.start.dto.UserDto;
+import com.corn.springcloud.start.user.dto.UserDto;
 import com.corn.springcloud.start.feignclient.TestUrlFeignClient;
 import com.corn.springcloud.start.feignclient.UserServiceFeignClient;
 import com.corn.springcloud.start.sentinel.BlockHandlerClass;
@@ -23,7 +22,6 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.cloud.stream.messaging.Source;
-import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,6 +1,6 @@
 package com.corn.springcloud.start.rocketmq;
 
-import com.corn.springcloud.start.dto.UserAddBonusMsgDTO;
+import com.corn.springcloud.start.user.dto.UserAddBonusMsgDTO;
 import com.corn.springcloud.start.user.entity.BonusEventLog;
 import com.corn.springcloud.start.user.service.BonusEventLogService;
 import com.corn.springcloud.start.user.service.UserService;

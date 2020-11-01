@@ -1,6 +1,6 @@
 package com.corn.springcloud.start.feignclient;
 
-import com.corn.springcloud.start.dto.UserDto;
+import com.corn.springcloud.start.user.dto.UserDto;
 import org.springframework.stereotype.Component;
 
 @Component

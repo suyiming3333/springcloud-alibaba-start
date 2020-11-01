@@ -17,12 +17,12 @@ class UserCenterApplicationTests {
     @Autowired
     private UserService userService;
 
-    @Test
-    public void test(){
-        List<User> userList = userService.list();
-        User user = new User();
-        user.setWxNickname("corn");
-        userService.save(user);
-        System.out.println(1);
-    }
+//    @Test
+//    public void test(){
+//        List<User> userList = userService.list();
+//        User user = new User();
+//        user.setWxNickname("corn");
+//        userService.save(user);
+//        System.out.println(1);
+//    }
 }

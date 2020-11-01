@@ -23,4 +23,10 @@
         update tb_user t set t.bonus = bonus + #{bonus} where t.id = #{id}
     </update>
 
+    <select id="findUserByWxId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_user where wx_id = #{wxId}
+    </select>
+
 </mapper>

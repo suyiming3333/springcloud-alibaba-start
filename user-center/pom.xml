@@ -80,6 +80,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!--微信公众平台api-->
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-miniapp</artifactId>
+            <version>3.5.0</version>
+        </dependency>
     </dependencies>
 
     <build>

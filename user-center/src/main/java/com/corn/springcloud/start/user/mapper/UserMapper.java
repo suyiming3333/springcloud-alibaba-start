@@ -17,4 +17,6 @@ public interface UserMapper extends BaseMapper<User> {
 
     void addUserBonus(@Param("id")Integer id,@Param("bonus")Integer bonus);
 
+    User findUserByWxId(@Param("wxId")String wxId);
+
 }

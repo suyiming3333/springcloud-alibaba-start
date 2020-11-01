@@ -1,5 +1,6 @@
 package com.corn.springcloud.start.user.service;
 
+import com.corn.springcloud.start.user.dto.UserLoginDTO;
 import com.corn.springcloud.start.user.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -14,4 +15,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface UserService extends IService<User> {
 
     void addBonus(Integer id, int bonus);
+
+    User login(UserLoginDTO loginDTO, String openid);
 }
