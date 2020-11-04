@@ -77,6 +77,9 @@ feign:
       #全局配置
       default:
         loggerLevel: BASIC
+        ##feign拦截器
+        requestInterceptors:
+          - com.corn.springcloud.start.feignclient.TokenRelayRequestInterceptor
       ##针对特定的client设置日志级别
       user-service:
         loggerLevel: FULL

@@ -14,8 +14,9 @@ public interface UserServiceFeignClient extends UserServiceInterface {
     /**
      * http://user-service/users/{id}
      * @param id
+     * @param token //feign调用token显式传递
      * @return
      */
 //    @GetMapping("/{id}")
-//    UserDto findById(@PathVariable Integer id);
+//    UserDto findById(@PathVariable Integer id,@RequestHeader("X-Token") String token);
 }

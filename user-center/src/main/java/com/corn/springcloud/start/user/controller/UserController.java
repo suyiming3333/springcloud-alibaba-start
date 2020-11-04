@@ -3,6 +3,7 @@ package com.corn.springcloud.start.user.controller;
 
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
+import com.corn.springcloud.start.security.auth.CheckLogin;
 import com.corn.springcloud.start.user.dto.*;
 import com.corn.springcloud.start.user.api.UserServiceInterface;
 import com.corn.springcloud.start.user.entity.BonusEventLog;
@@ -55,6 +56,7 @@ public class UserController implements UserServiceInterface {
 
     @Override
     @GetMapping("/{id}")
+    @CheckLogin
     public UserDto findById(@PathVariable Integer id){
         User user = userService.getById(id);
         UserDto userDto = new UserDto();
