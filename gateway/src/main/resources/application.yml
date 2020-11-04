@@ -20,16 +20,26 @@ spring:
           #gateway通过服务发现组件找到其他微服务
           enabled: true
       routes:
-        - id: test_router
-          ##请求转发的目的地址
+        - id: user_router
+          ##负载均衡
           uri: lb://user-service
-          ##谓词条件满足的话
           predicates:
-            - TimeBetween=上午9:00,下午10:00
-#            - After=2018-12-25T14:33:47.789+08:00
-          filters:
-            - PreLog=su,yiming
-            - AddRequestHeader=X-Request-Foo,Bar
+            - Path=/users/**
+        - id: share-service
+          uri: lb://share-service
+          predicates:
+            - Path=/shares/**
+
+#        - id: test_router
+#          ##请求转发的目的地址
+#          uri: lb://user-service
+#          ##谓词条件满足的话
+#          predicates:
+#            - TimeBetween=上午9:00,下午10:00
+##            - After=2018-12-25T14:33:47.789+08:00
+#          filters:
+#            - PreLog=su,yiming
+#            - AddRequestHeader=X-Request-Foo,Bar
       default-filters:
         - PreLog=su,yiming
 

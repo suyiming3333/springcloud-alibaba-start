@@ -65,6 +65,18 @@ public class UserController implements UserServiceInterface {
         return userDto;
     }
 
+    /**
+     * 模拟生成token(假的登录)
+     */
+    @GetMapping("/gen-token")
+    public String genToken() {
+        Map<String, Object> userInfo = new HashMap<>(3);
+        userInfo.put("id", 1);
+        userInfo.put("wxNickname", "cornsu");
+        userInfo.put("role", "admin");
+        return this.jwtOperator.generateToken(userInfo);
+    }
+
     @Override
     @PostMapping("/addBonus")
     public void addBonus(
