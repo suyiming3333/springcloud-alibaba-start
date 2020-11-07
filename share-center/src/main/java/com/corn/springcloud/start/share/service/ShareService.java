@@ -4,6 +4,9 @@ import com.corn.springcloud.start.dto.ShareAuditDto;
 import com.corn.springcloud.start.dto.ShareDto;
 import com.corn.springcloud.start.share.entity.Share;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.github.pagehelper.PageInfo;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * <p>
@@ -21,4 +24,7 @@ public interface ShareService extends IService<Share> {
 
     ShareDto auditByIdInDBWithRocketMqLog(Integer id, ShareAuditDto shareAuditDto, String transactionId);
 
+    PageInfo<Share> q(String title, Integer pageNo, Integer pageSize, Integer userId);
+
+    Share exchangeById(Integer id,Integer userId);
 }

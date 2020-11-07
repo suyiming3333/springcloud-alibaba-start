@@ -79,17 +79,19 @@ public class UserController implements UserServiceInterface {
 
     @Override
     @PostMapping("/addBonus")
-    public void addBonus(
-            @RequestParam("userId") Integer userId,
-            @RequestParam("bonus") int bonus) {
+    public void addBonus(@RequestBody UserAddBonusMsgDTO userAddBonusMsgDTO) {
+        Integer userId = userAddBonusMsgDTO.getUserId();
+        Integer bonus = userAddBonusMsgDTO.getBonus();
+        String event = userAddBonusMsgDTO.getEvent();
+        String description = userAddBonusMsgDTO.getDescription();
         //添加用户积分
         userService.addBonus(userId,bonus);
         //添加用户积分事件记录
         BonusEventLog bonusEventLog = new BonusEventLog();
         bonusEventLog.setUserId(userId);
         bonusEventLog.setValue(bonus);
-        bonusEventLog.setEvent("test event");
-        bonusEventLog.setDescription("test 4");
+        bonusEventLog.setEvent(event);
+        bonusEventLog.setDescription(description);
         bonusEventLog.setCreateTime(LocalDateTime.now());
         bonusEventLogService.save(bonusEventLog);
 

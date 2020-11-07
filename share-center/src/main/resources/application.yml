@@ -70,10 +70,13 @@ ribbon:
 ##feign的日志是建立在 debug日志模式的基础上的
 logging:
   level:
+
     com:
       corn:
         springcloud:
           start:
+            share:
+              mapper: debug
             feignclient: debug
 feign:
   sentinel:

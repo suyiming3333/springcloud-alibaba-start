@@ -8,6 +8,7 @@ import com.alibaba.csp.sentinel.context.ContextUtil;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.csp.sentinel.util.StringUtil;
 import com.corn.springcloud.start.dto.ShareDto;
+import com.corn.springcloud.start.security.auth.CheckLogin;
 import com.corn.springcloud.start.user.dto.UserDto;
 import com.corn.springcloud.start.feignclient.TestUrlFeignClient;
 import com.corn.springcloud.start.feignclient.UserServiceFeignClient;
@@ -15,7 +16,11 @@ import com.corn.springcloud.start.sentinel.BlockHandlerClass;
 import com.corn.springcloud.start.sentinel.FallbackClass;
 import com.corn.springcloud.start.share.entity.Share;
 import com.corn.springcloud.start.share.service.ShareService;
+import com.corn.springcloud.start.utils.JwtOperator;
+import com.github.pagehelper.PageInfo;
+import io.jsonwebtoken.Claims;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -27,6 +32,7 @@ import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -42,6 +48,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/shares")
 public class ShareController {
+
+    @Autowired
+    private JwtOperator jwtOperator;
 
     @Autowired
     private ShareService shareService;
@@ -110,6 +119,38 @@ public class ShareController {
 //        }
 
         return shareDto;
+    }
+
+
+    @GetMapping("/q")
+    public PageInfo<Share> q(
+            @RequestParam(required = false) String title,
+            @RequestParam(required = false, defaultValue = "1") Integer pageNo,
+            @RequestParam(required = false, defaultValue = "10") Integer pageSize,
+            @RequestHeader(value = "X-Token", required = false) String token) {
+        if (pageSize > 100) {
+            pageSize = 100;
+        }
+        Integer userId = null;
+        if (StringUtils.isNotBlank(token)) {
+            //从token里获取userId
+            Claims claims = this.jwtOperator.getClaimsFromToken(token);
+            userId = (Integer) claims.get("id");
+        }
+        return this.shareService.q(title, pageNo, pageSize, userId);
+    }
+
+    /**
+     * 积分兑换分享的内容
+     * @param id
+     * @param request
+     * @return
+     */
+    @GetMapping("/exchange/{id}")
+    @CheckLogin
+    public Share exchangeById(@PathVariable Integer id, HttpServletRequest request) {
+        Integer userId = Integer.valueOf(request.getAttribute("id").toString());
+        return this.shareService.exchangeById(id,userId);
     }
 
 

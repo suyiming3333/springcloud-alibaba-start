@@ -1,5 +1,6 @@
 package com.corn.springcloud.start.feignclient;
 
+import com.corn.springcloud.start.user.dto.UserAddBonusMsgDTO;
 import com.corn.springcloud.start.user.dto.UserDto;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +21,7 @@ public class UserServiceFeignClientFallBackFactory implements FallbackFactory<Us
             }
 
             @Override
-            public void addBonus(Integer userId, int bonus) {
+            public void addBonus(UserAddBonusMsgDTO userAddBonusMsgDTO) {
 
             }
         };

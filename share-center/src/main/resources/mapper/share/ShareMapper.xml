@@ -26,4 +26,16 @@
         id, user_id, title, create_time, update_time, is_original, author, cover, summary, price, download_url, buy_count, show_flag, audit_status, reason
     </sql>
 
+    <select id="querySharesByPage" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_share
+        <where>
+            <if test="title != null and title != ''">
+                title like concat('%',#{title},'%')
+            </if>
+            and audit_status = 'PASS'
+        </where>
+    </select>
+
 </mapper>

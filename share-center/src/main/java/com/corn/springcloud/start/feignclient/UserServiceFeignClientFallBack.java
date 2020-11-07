@@ -1,5 +1,6 @@
 package com.corn.springcloud.start.feignclient;
 
+import com.corn.springcloud.start.user.dto.UserAddBonusMsgDTO;
 import com.corn.springcloud.start.user.dto.UserDto;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,7 @@ public class UserServiceFeignClientFallBack implements UserServiceFeignClient{
     }
 
     @Override
-    public void addBonus(Integer userId, int bonus) {
+    public void addBonus(UserAddBonusMsgDTO userAddBonusMsgDTO) {
 
     }
 }

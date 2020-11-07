@@ -2,8 +2,12 @@ package com.corn.springcloud.start.share.service.impl;
 
 import com.alibaba.csp.sentinel.EntryType;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.corn.springcloud.start.dto.ShareAuditDto;
 import com.corn.springcloud.start.dto.ShareDto;
+import com.corn.springcloud.start.share.entity.MidUserShare;
+import com.corn.springcloud.start.share.mapper.MidUserShareMapper;
+import com.corn.springcloud.start.share.service.MidUserShareService;
 import com.corn.springcloud.start.user.dto.UserAddBonusMsgDTO;
 import com.corn.springcloud.start.feignclient.UserServiceFeignClient;
 import com.corn.springcloud.start.share.entity.RocketmqTransactionLog;
@@ -12,6 +16,10 @@ import com.corn.springcloud.start.share.mapper.RocketmqTransactionLogMapper;
 import com.corn.springcloud.start.share.mapper.ShareMapper;
 import com.corn.springcloud.start.share.service.ShareService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.corn.springcloud.start.user.dto.UserDto;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.apache.rocketmq.spring.support.RocketMQHeaders;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +27,7 @@ import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -38,6 +47,9 @@ public class ShareServiceImpl extends ServiceImpl<ShareMapper, Share> implements
 
     @Autowired
     private UserServiceFeignClient userServiceFeignClient;
+
+    @Autowired
+    private MidUserShareMapper midUserShareMapper;
 
     @Autowired
     private RocketMQTemplate rocketMQTemplate;
@@ -110,5 +122,53 @@ public class ShareServiceImpl extends ServiceImpl<ShareMapper, Share> implements
 //        throw new RuntimeException("test 4 db exception");
         return null;
 
+    }
+
+    @Override
+    public PageInfo<Share> q(String title, Integer pageNo, Integer pageSize, Integer userId) {
+        //mybatis拦截器实现sql 分页
+        Page page = PageHelper.startPage(pageNo,pageSize);
+        PageInfo<Share> sharePageInfo = new PageInfo<>();
+        List<Share> shares = shareMapper.querySharesByPage(title);
+        sharePageInfo.setList(shares);
+        sharePageInfo.setSize(shares.size());
+        sharePageInfo.setTotal(page.getTotal());
+        return sharePageInfo;
+    }
+
+    @Override
+    public Share exchangeById(Integer id,Integer userId) {
+        //1、判断该分享是否存在
+        Share share = shareMapper.selectById(id);
+        if( share == null){
+            throw new IllegalArgumentException("share does not exists");
+        }
+
+        //2、用户是否已经兑换过
+        QueryWrapper<MidUserShare> wrapper = new QueryWrapper<>();
+        wrapper.setEntity(MidUserShare.builder().shareId(id).userId(userId).build());
+        Integer midTotal = midUserShareMapper.selectCount(wrapper);
+        if(midTotal>0){
+            return share;
+        }
+        //3、查询用户积分是否足够兑换
+        UserDto userDto = userServiceFeignClient.findById(userId);
+        Integer userBonus = userDto.getBonus();
+        Integer price = share.getPrice();
+        if(userBonus < price){
+            throw new IllegalArgumentException("bonus not enough");
+        }
+
+        //4、兑换,用户扣减积分、新增兑换记录(此处会存在分布式事务问题)
+        userServiceFeignClient.addBonus(UserAddBonusMsgDTO.builder()
+                .bonus(0-price)
+                .userId(userId)
+                .description("兑换了内容")
+                .event("兑换事件")
+                .build());
+        midUserShareMapper.insert(MidUserShare.builder()
+                .userId(userId)
+                .shareId(id).build());
+        return share;
     }
 }
