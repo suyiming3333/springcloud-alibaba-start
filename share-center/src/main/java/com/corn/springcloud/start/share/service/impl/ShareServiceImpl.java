@@ -3,11 +3,10 @@ package com.corn.springcloud.start.share.service.impl;
 import com.alibaba.csp.sentinel.EntryType;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.corn.springcloud.start.dto.ShareAuditDto;
-import com.corn.springcloud.start.dto.ShareDto;
+import com.corn.springcloud.start.share.dto.ShareAuditDto;
+import com.corn.springcloud.start.share.dto.ShareDto;
 import com.corn.springcloud.start.share.entity.MidUserShare;
 import com.corn.springcloud.start.share.mapper.MidUserShareMapper;
-import com.corn.springcloud.start.share.service.MidUserShareService;
 import com.corn.springcloud.start.user.dto.UserAddBonusMsgDTO;
 import com.corn.springcloud.start.feignclient.UserServiceFeignClient;
 import com.corn.springcloud.start.share.entity.RocketmqTransactionLog;
@@ -30,6 +29,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 /**
  * <p>
@@ -130,6 +130,19 @@ public class ShareServiceImpl extends ServiceImpl<ShareMapper, Share> implements
         Page page = PageHelper.startPage(pageNo,pageSize);
         PageInfo<Share> sharePageInfo = new PageInfo<>();
         List<Share> shares = shareMapper.querySharesByPage(title);
+        //用户未登录,或者用户未兑换过这个内容，则下载地址设置为空
+        if(userId == -1){
+            shares.stream().forEach(vo->vo.setDownloadUrl(null));
+        }else{
+            //用户如果登录，查询用户兑换过的shares进行过滤
+            List<MidUserShare> midUserShares = midUserShareMapper.selectList(new QueryWrapper<MidUserShare>().setEntity(MidUserShare.builder().userId(userId).build()));
+            List<Integer> midShareIds = midUserShares.stream().map(MidUserShare::getShareId).collect(Collectors.toList());
+            shares.stream().forEach(vo->{
+                if(!midShareIds.contains(vo.getId())){
+                    vo.setDownloadUrl(null);
+                }
+            });
+        }
         sharePageInfo.setList(shares);
         sharePageInfo.setSize(shares.size());
         sharePageInfo.setTotal(page.getTotal());

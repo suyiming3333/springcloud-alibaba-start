@@ -2,7 +2,7 @@ package com.corn.springcloud.start.rocketmq;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.segments.MergeSegments;
-import com.corn.springcloud.start.dto.ShareAuditDto;
+import com.corn.springcloud.start.share.dto.ShareAuditDto;
 import com.corn.springcloud.start.share.entity.RocketmqTransactionLog;
 import com.corn.springcloud.start.share.mapper.RocketmqTransactionLogMapper;
 import com.corn.springcloud.start.share.service.ShareService;

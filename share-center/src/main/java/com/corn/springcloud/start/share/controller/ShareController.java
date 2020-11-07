@@ -7,7 +7,8 @@ import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.context.ContextUtil;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.csp.sentinel.util.StringUtil;
-import com.corn.springcloud.start.dto.ShareDto;
+import com.corn.springcloud.start.share.dto.ShareContributeDto;
+import com.corn.springcloud.start.share.dto.ShareDto;
 import com.corn.springcloud.start.security.auth.CheckLogin;
 import com.corn.springcloud.start.user.dto.UserDto;
 import com.corn.springcloud.start.feignclient.TestUrlFeignClient;
@@ -33,6 +34,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -133,9 +135,14 @@ public class ShareController {
         }
         Integer userId = null;
         if (StringUtils.isNotBlank(token)) {
-            //从token里获取userId
-            Claims claims = this.jwtOperator.getClaimsFromToken(token);
-            userId = (Integer) claims.get("id");
+            try{
+                //从token里获取userId
+                Claims claims = this.jwtOperator.getClaimsFromToken(token);
+                userId = (Integer) claims.get("id");
+            }catch (IllegalArgumentException e){
+                log.info("no login visitor");
+                userId = -1;
+            }
         }
         return this.shareService.q(title, pageNo, pageSize, userId);
     }
@@ -151,6 +158,20 @@ public class ShareController {
     public Share exchangeById(@PathVariable Integer id, HttpServletRequest request) {
         Integer userId = Integer.valueOf(request.getAttribute("id").toString());
         return this.shareService.exchangeById(id,userId);
+    }
+
+
+    @PostMapping("/contribute")
+    @CheckLogin
+    public void contribute(@RequestBody ShareContributeDto shareContributeDto,HttpServletRequest request){
+        Integer userId = (Integer) request.getAttribute("id");
+        Share share = Share.builder()
+                .auditStatus("DRAFT")
+                .createTime(LocalDateTime.now())
+                .updateTime(LocalDateTime.now())
+                .userId(userId).build();
+        BeanUtils.copyProperties(shareContributeDto,share);
+        shareService.save(share);
     }
 
 

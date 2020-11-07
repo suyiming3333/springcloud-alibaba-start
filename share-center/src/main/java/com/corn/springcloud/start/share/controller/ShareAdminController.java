@@ -1,8 +1,8 @@
 package com.corn.springcloud.start.share.controller;
 
 
-import com.corn.springcloud.start.dto.ShareAuditDto;
-import com.corn.springcloud.start.dto.ShareDto;
+import com.corn.springcloud.start.share.dto.ShareAuditDto;
+import com.corn.springcloud.start.share.dto.ShareDto;
 import com.corn.springcloud.start.security.auth.CheckAuthorization;
 import com.corn.springcloud.start.share.service.ShareService;
 import org.springframework.beans.factory.annotation.Autowired;

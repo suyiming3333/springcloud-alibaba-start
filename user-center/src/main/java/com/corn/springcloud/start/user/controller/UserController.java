@@ -11,12 +11,14 @@ import com.corn.springcloud.start.user.entity.User;
 import com.corn.springcloud.start.user.service.BonusEventLogService;
 import com.corn.springcloud.start.user.service.UserService;
 import com.corn.springcloud.start.utils.JwtOperator;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.error.WxErrorException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -142,6 +144,19 @@ public class UserController implements UserServiceInterface {
                                 .token(token)
                                 .build()
                 )
+                .build();
+    }
+
+    @GetMapping("/me")
+    @CheckLogin
+    public UserRespDTO me(HttpServletRequest request){
+        Integer userId = (Integer) request.getAttribute("id");
+        User user = userService.getById(userId);
+        return UserRespDTO.builder()
+                .id(user.getId())
+                .avatarUrl(user.getAvatarUrl())
+                .bonus(user.getBonus())
+                .wxNickname(user.getWxNickname())
                 .build();
     }
 }

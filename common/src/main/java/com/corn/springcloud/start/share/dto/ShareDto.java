@@ -1,4 +1,4 @@
-package com.corn.springcloud.start.dto;
+package com.corn.springcloud.start.share.dto;
 
 
 import lombok.Data;

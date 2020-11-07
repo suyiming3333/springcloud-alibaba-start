@@ -1,12 +1,10 @@
 package com.corn.springcloud.start.share.service;
 
-import com.corn.springcloud.start.dto.ShareAuditDto;
-import com.corn.springcloud.start.dto.ShareDto;
+import com.corn.springcloud.start.share.dto.ShareAuditDto;
+import com.corn.springcloud.start.share.dto.ShareDto;
 import com.corn.springcloud.start.share.entity.Share;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.github.pagehelper.PageInfo;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * <p>

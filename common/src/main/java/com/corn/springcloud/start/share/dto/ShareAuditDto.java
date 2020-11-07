@@ -1,4 +1,4 @@
-package com.corn.springcloud.start.dto;
+package com.corn.springcloud.start.share.dto;
 
 import com.corn.springcloud.start.enums.AuditStatusEnum;
 import lombok.Data;
