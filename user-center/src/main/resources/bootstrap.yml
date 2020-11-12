@@ -1,0 +1,27 @@
+##引导上下文
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        namespace: 73be76f5-5fe5-4028-9fc5-d03c169a3cf8
+        ##是否允许本地覆盖远程
+        allow-override: true
+        ##是否一切以本地为准
+        override-none: false
+        ##远程配置能否覆盖系统环境变量或属性
+        override-system-properties: true
+        ##共享的线上配置
+        extension-configs[0]:
+          data-id: common1.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        extension-configs[1]:
+          data-id: common2.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+  application:
+    name: user-service
+  profiles:
+    active: prod

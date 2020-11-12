@@ -16,6 +16,8 @@ import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.error.WxErrorException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -35,6 +37,8 @@ import java.util.Map;
 @Slf4j
 @RestController
 @RequestMapping("/users")
+//配置中心动态修改后自动刷新
+@RefreshScope
 public class UserController implements UserServiceInterface {
 
     @Autowired
@@ -49,10 +53,21 @@ public class UserController implements UserServiceInterface {
     @Autowired
     private BonusEventLogService bonusEventLogService;
 
+    @Value("${my.weather}")
+    private String todayWeather;
+
+    @Value("${first-name}")
+    private String firstName;
+
+    @Value("${last-name}")
+    private String lastName;
+
 
     @RequestMapping(value = "/test")
     public String hello(){
-        return "heelo";
+        System.out.println("weather:"+todayWeather);
+        System.out.println("name:"+firstName+""+lastName);
+        return todayWeather;
     }
 
 
