@@ -42,6 +42,7 @@
     <mysql.version>8.0.21</mysql.version>
     <rocketmq.version>2.1.1</rocketmq.version>
     <jjwt.version>0.10.7</jjwt.version>
+    <fastjson.version>1.2.75</fastjson.version>
   </properties>
 
   <dependencyManagement>
@@ -108,6 +109,12 @@
         <artifactId>mysql-connector-java</artifactId>
         <version>${mysql.version}</version>
         <scope>runtime</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${fastjson.version}</version>
       </dependency>
 
       <dependency>
