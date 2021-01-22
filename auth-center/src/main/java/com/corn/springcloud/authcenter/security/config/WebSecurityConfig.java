@@ -45,13 +45,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().formLogin()
-//                .loginProcessingUrl("/login").permitAll()
+        http.csrf().disable()
+                .formLogin()
+                .loginProcessingUrl("/login").permitAll()
                 .successHandler(successHandler).permitAll()
                 .failureHandler(failureHandler).permitAll().and()
                 .logout().logoutSuccessHandler(logoutHandler).and()
                 .authorizeRequests()
-                .antMatchers("/oauth/**","/api/login").permitAll()
+                .antMatchers("/oauth/**","/login","/api/login").permitAll()
                 .anyRequest().authenticated()/**所有请求都需要认证才能访问**/
                 .and()
                 .addFilter(new MyAuthenticationFilter(authenticationManager()))/**设置身份认证过滤器**/
