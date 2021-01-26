@@ -9,6 +9,7 @@ management:
     health:
       show-details: always
 
+
 spring:
   cloud:
     nacos:
@@ -21,6 +22,12 @@ spring:
           #gateway通过服务发现组件找到其他微服务
           enabled: true
       routes:
+        - id: auth_router
+          uri: lb://auth-center
+          predicates:
+            - Path=/api/auth/**
+          filters:
+            - RewritePath=/api/auth/(?<segment>.*),/$\{segment}
         - id: user_router
           ##负载均衡
           uri: lb://user-service
@@ -54,3 +61,5 @@ spring:
       # 抽样率,默认是0.1(10%,表示90%的数据都会丢弃)
       #1.0表示100%,表示所有数据都会上报给zipkin
       probability: 1.0
+  main:
+    allow-bean-definition-overriding: true
