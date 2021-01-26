@@ -20,9 +20,12 @@ spring:
       connection-test-query: select 1
   application:
     name: auth-center
-#  cloud:
-#    nacos:
-#      server-addr: 127.0.0.1:8848
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        namespace: 73be76f5-5fe5-4028-9fc5-d03c169a3cf8
+
 
 #默认值可不设置
 #mybatis-plus:
