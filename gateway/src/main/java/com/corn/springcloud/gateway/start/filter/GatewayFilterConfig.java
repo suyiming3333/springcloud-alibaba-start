@@ -38,9 +38,9 @@ public class GatewayFilterConfig implements GlobalFilter, Ordered {
         String requestUrl = exchange.getRequest().getPath().value();
         AntPathMatcher pathMatcher = new AntPathMatcher();
         //1 uaa服务所有放行
-        if (pathMatcher.match("/api/auth/**", requestUrl)) {
-            return chain.filter(exchange);
-        }
+//        if (pathMatcher.match("/api/auth/**", requestUrl)) {
+//            return chain.filter(exchange);
+//        }
         //2 检查token是否存在
         String token = getToken(exchange);
         if (StringUtils.isBlank(token)) {

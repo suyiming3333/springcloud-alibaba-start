@@ -37,6 +37,11 @@ spring:
         cluster-name: b-center
         metadata:
           version: v1
+    ##sentinel配置
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
     ##cloud stream的配置
     stream:
       rocketmq:
@@ -51,3 +56,12 @@ server:
 
 rocketmq:
   name-server: 127.0.0.1:9876
+##actuator声明
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

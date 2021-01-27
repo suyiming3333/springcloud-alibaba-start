@@ -20,6 +20,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.security.RolesAllowed;
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -73,7 +74,8 @@ public class UserController implements UserServiceInterface {
 
     @Override
     @GetMapping("/{id}")
-    @CheckLogin
+//    @CheckLogin
+    @RolesAllowed("admin")
     public UserDto findById(@PathVariable Integer id){
         User user = userService.getById(id);
         UserDto userDto = new UserDto();
