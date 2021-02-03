@@ -23,6 +23,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
+            <!--先排除，然后重新引入-->
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>
@@ -30,6 +31,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--gateway使用webflux,排除掉web-mvc不然会有冲突-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
@@ -82,7 +84,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!--过滤器等功能依然需要 Servlet 支持-->
+        <!--过滤器等功能依然需要 Servlet 支持,gateway 第二代网关使用netty，可以去掉-->
 <!--        <dependency>-->
 <!--            <groupId>javax.servlet</groupId>-->
 <!--            <artifactId>javax.servlet-api</artifactId>-->
