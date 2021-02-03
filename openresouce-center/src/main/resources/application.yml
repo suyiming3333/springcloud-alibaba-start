@@ -1,0 +1,10 @@
+server:
+  port: 9222
+spring:
+  application:
+    name: openresource-center
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        namespace: 73be76f5-5fe5-4028-9fc5-d03c169a3cf8
