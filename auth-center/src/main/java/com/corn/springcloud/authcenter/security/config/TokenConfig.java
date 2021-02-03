@@ -19,7 +19,7 @@ import java.util.Collections;
 public class TokenConfig {
 
     /**
-     * 秘钥串
+     * 秘钥串，用于jwt加密解密
      */
     private static final String SIGNING_KEY = "uaa";
 
@@ -54,6 +54,7 @@ public class TokenConfig {
 
     /**
      * 授权码存储方式
+     * jdbc获取
      */
 
     @Bean

@@ -28,7 +28,7 @@ import java.util.Map;
 
 @Component
 @Slf4j
-public class GatewayFilterConfig implements GlobalFilter, Ordered {
+public class AccessTokenGatewayFilter implements GlobalFilter, Ordered {
 
     @Autowired
     private TokenStore tokenStore;
@@ -37,39 +37,40 @@ public class GatewayFilterConfig implements GlobalFilter, Ordered {
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String requestUrl = exchange.getRequest().getPath().value();
         AntPathMatcher pathMatcher = new AntPathMatcher();
-        //1 uaa服务所有放行
-//        if (pathMatcher.match("/api/auth/**", requestUrl)) {
+
+//        if(pathMatcher.match("/api/**/**", requestUrl)){
 //            return chain.filter(exchange);
 //        }
-        //2 检查token是否存在
-        String token = getToken(exchange);
-        if (StringUtils.isBlank(token)) {
-            return noTokenMono(exchange);
+
+        if(pathMatcher.match("/openapi/**", requestUrl)){
+            //2 检查token是否存在
+            String token = getToken(exchange);
+            if (StringUtils.isBlank(token)) {
+                return noTokenMono(exchange);
+            }
+            //3 判断是否是有效的token
+            OAuth2AccessToken oAuth2AccessToken;
+            try {
+                oAuth2AccessToken = tokenStore.readAccessToken(token);
+                Map<String, Object> additionalInformation = oAuth2AccessToken.getAdditionalInformation();
+                //取出用户身份信息
+                String principal = (String) additionalInformation.get("user_name");
+                //获取用户权限
+                List<String> authorities = (List<String>) additionalInformation.get("authorities");
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("principal", principal);
+                jsonObject.put("authorities", authorities);
+                //给header里面添加值
+                String base64 = EncryptUtil.encodeUTF8StringBase64(jsonObject.toJSONString());
+                ServerHttpRequest tokenRequest = exchange.getRequest().mutate().header("json-token", base64).build();
+                ServerWebExchange build = exchange.mutate().request(tokenRequest).build();
+                return chain.filter(build);
+            } catch (InvalidTokenException e) {
+                log.info("无效的token: {}", token);
+                return invalidTokenMono(exchange);
+            }
         }
-        //3 判断是否是有效的token
-        OAuth2AccessToken oAuth2AccessToken;
-        try {
-            oAuth2AccessToken = tokenStore.readAccessToken(token);
-            Map<String, Object> additionalInformation = oAuth2AccessToken.getAdditionalInformation();
-            //取出用户身份信息
-            String principal = (String) additionalInformation.get("user_name");
-            //获取用户权限
-            List<String> authorities = (List<String>) additionalInformation.get("authorities");
-            JSONObject jsonObject=new JSONObject();
-            jsonObject.put("principal",principal);
-            jsonObject.put("authorities",authorities);
-            //给header里面添加值
-            String base64 = EncryptUtil.encodeUTF8StringBase64(jsonObject.toJSONString());
-            ServerHttpRequest tokenRequest = exchange.getRequest().mutate().header("json-token", base64).build();
-            ServerWebExchange build = exchange.mutate().request(tokenRequest).build();
-            return chain.filter(build);
-        } catch (InvalidTokenException e) {
-            log.info("无效的token: {}", token);
-            return invalidTokenMono(exchange);
-        }
-
-
-
+        return chain.filter(exchange);
     }
 
 
