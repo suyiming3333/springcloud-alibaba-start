@@ -18,6 +18,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.security.RolesAllowed;
@@ -37,7 +38,7 @@ import java.util.Map;
 
 @Slf4j
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 //配置中心动态修改后自动刷新
 @RefreshScope
 public class UserController implements UserServiceInterface {
@@ -76,6 +77,7 @@ public class UserController implements UserServiceInterface {
     @GetMapping("/{id}")
 //    @CheckLogin
     @RolesAllowed("admin")
+    @PreAuthorize("hasAnyAuthority('teacher','student')")
     public UserDto findById(@PathVariable Integer id){
         User user = userService.getById(id);
         UserDto userDto = new UserDto();
