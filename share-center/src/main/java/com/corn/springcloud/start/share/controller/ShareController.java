@@ -28,6 +28,7 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.cloud.stream.messaging.Source;
+import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.*;
 
@@ -107,13 +108,13 @@ public class ShareController {
 //        ResponseEntity<UserDto> entity = restTemplate.getForEntity(path, UserDto.class,share.getUserId());
 
         //通过user-service服务id使用远程调用(已实现负载均衡)
-//        ResponseEntity<UserDto> entity = restTemplate.getForEntity("http://user-service/users/{id}", UserDto.class,share.getUserId());
+        ResponseEntity<UserDto> entity = restTemplate.getForEntity("http://user-service/users/{id}", UserDto.class,share.getUserId());
 
-        UserDto userDto = userServiceFeignClient.findById(share.getUserId());
+//        UserDto userDto = userServiceFeignClient.findById(share.getUserId());
         ShareDto shareDto = new ShareDto();
 
         BeanUtils.copyProperties(share,shareDto);
-        shareDto.setWxNickname(userDto.getWxNickname());
+        shareDto.setWxNickname("null");
 //        if(200 == entity.getStatusCodeValue()){
 //            shareDto.setWxNickname(entity.getBody().getWxNickname());
 //        }else{

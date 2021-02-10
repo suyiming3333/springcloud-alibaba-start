@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/user-center/pom.xml" />
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/auth-center/pom.xml" />
+        <option value="$PROJECT_DIR$/openresouce-center/pom.xml" />
       </list>
     </option>
   </component>

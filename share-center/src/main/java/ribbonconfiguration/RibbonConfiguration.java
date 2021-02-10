@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 //@Configuration
 public class RibbonConfiguration {
 
-    @Bean
+    @Bean(name = "mrole")
     public IRule ribbonRule(){
         return new RandomRule();
     }

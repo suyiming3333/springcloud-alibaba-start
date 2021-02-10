@@ -59,9 +59,9 @@ spring:
 server:
   port: 8090
 #局部负载均衡配置(但报错)
-#user-service:
-#  ribbon:
-#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+user-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 #饥饿加载
 ribbon:
   eager-load:
