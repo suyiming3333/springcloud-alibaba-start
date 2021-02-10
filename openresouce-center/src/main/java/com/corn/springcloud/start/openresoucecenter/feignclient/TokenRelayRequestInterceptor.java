@@ -1,7 +1,7 @@
 package com.corn.springcloud.start.openresoucecenter.feignclient;
 
-import com.corn.springcloud.start.openresoucecenter.security.jwt.JwtTokenUtil;
 import com.corn.springcloud.start.user.entity.UserEntity;
+import com.corn.springcloud.start.utils.JwtTokenUtil;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.apache.commons.lang3.StringUtils;

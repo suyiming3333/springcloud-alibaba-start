@@ -1,4 +1,4 @@
-package com.corn.springcloud.start.jwt;
+package com.corn.springcloud.start.utils;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -85,7 +85,7 @@ public class JwtTokenUtil {
     }
 
     public static void main(String[] args) {
-        String token = "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6IjEzMjY1OTA1Mzk3IiwiaWF0IjoxNjEyOTQyNTE0LCJleHAiOjE2MTM1NDczMTR9.VhFZVT9p3bs-yCYm8tlaZmvPz75omsA5m36E49DFDwg";
+        String token = "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiW3VzZXI6bWFuYWdlXSIsInVzZXJuYW1lIjoie1wiZnVsbG5hbWVcIjpcIuiLj-S6pumTrVwiLFwiaWRcIjoxLFwicGFzc3dvcmRcIjpcIiQyYSQxMCR3RkExNGxHS2pQdWZmQVN0OE8vY1BPeTF2Rm01YWdYemRaR0xNbi9uZW5waFlRUkhhVnlkdVwiLFwidXNlcm5hbWVcIjpcInN1eWltaW5nXCJ9IiwiaWF0IjoxNjEyMzYyNTk3LCJleHAiOjE2MTI5NjczOTd9.enLBeNRIvLNVLycMOox0CrQuRY7BcgYhMeHMxyNhQM0";
         Claims claims = checkJWT(token);
         System.out.println(1);
     }

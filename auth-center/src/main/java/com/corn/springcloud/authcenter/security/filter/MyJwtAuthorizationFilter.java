@@ -1,6 +1,6 @@
 package com.corn.springcloud.authcenter.security.filter;
 
-import com.corn.springcloud.authcenter.security.jwt.JwtTokenUtil;
+import com.corn.springcloud.start.utils.JwtTokenUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

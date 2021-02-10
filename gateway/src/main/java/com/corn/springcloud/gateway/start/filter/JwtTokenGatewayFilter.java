@@ -1,7 +1,7 @@
 package com.corn.springcloud.gateway.start.filter;
 
 import com.alibaba.fastjson.JSONObject;
-import com.corn.springcloud.gateway.start.jwt.JwtTokenUtil;
+import com.corn.springcloud.start.utils.JwtTokenUtil;
 import io.jsonwebtoken.Claims;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
