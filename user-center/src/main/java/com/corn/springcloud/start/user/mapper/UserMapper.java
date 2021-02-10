@@ -1,5 +1,6 @@
 package com.corn.springcloud.start.user.mapper;
 
+import com.corn.springcloud.start.user.dto.UserDtoV2;
 import com.corn.springcloud.start.user.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
@@ -18,5 +19,7 @@ public interface UserMapper extends BaseMapper<User> {
     void addUserBonus(@Param("id")Integer id,@Param("bonus")Integer bonus);
 
     User findUserByWxId(@Param("wxId")String wxId);
+
+    UserDtoV2 loadUserByUserName(@Param("userName") String userName);
 
 }

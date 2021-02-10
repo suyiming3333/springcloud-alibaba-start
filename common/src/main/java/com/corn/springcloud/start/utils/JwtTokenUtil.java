@@ -85,7 +85,7 @@ public class JwtTokenUtil {
     }
 
     public static void main(String[] args) {
-        String token = "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiW3VzZXI6bWFuYWdlXSIsInVzZXJuYW1lIjoie1wiZnVsbG5hbWVcIjpcIuiLj-S6pumTrVwiLFwiaWRcIjoxLFwicGFzc3dvcmRcIjpcIiQyYSQxMCR3RkExNGxHS2pQdWZmQVN0OE8vY1BPeTF2Rm01YWdYemRaR0xNbi9uZW5waFlRUkhhVnlkdVwiLFwidXNlcm5hbWVcIjpcInN1eWltaW5nXCJ9IiwiaWF0IjoxNjEyMzYyNTk3LCJleHAiOjE2MTI5NjczOTd9.enLBeNRIvLNVLycMOox0CrQuRY7BcgYhMeHMxyNhQM0";
+        String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsicmVzMSJdLCJ1c2VyX25hbWUiOiJ7XCJmdWxsbmFtZVwiOlwi6IuP5Lqm6ZOtXCIsXCJpZFwiOjEsXCJwYXNzd29yZFwiOlwiJDJhJDEwJHdGQTE0bEdLalB1ZmZBU3Q4Ty9jUE95MXZGbTVhZ1h6ZFpHTE1uL25lbnBoWVFSSGFWeWR1XCIsXCJ1c2VybmFtZVwiOlwic3V5aW1pbmdcIn0iLCJzY29wZSI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIiwiUk9MRV9BUEkiXSwiZXhwIjoxNjEzMjIzNzE2LCJhdXRob3JpdGllcyI6WyJ1c2VyOm1hbmFnZSJdLCJqdGkiOiJiZTA3YTE2Yy01NjA1LTQ4NDAtOTlmOC01YWNiOTI3YmY1ZjEiLCJjbGllbnRfaWQiOiJjMSJ9.BimUq3JohVLC-ugPKbOJ7q6217isKkZA33nBEBz6O_Q";
         Claims claims = checkJWT(token);
         System.out.println(1);
     }

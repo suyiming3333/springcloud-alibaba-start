@@ -2,6 +2,7 @@ package com.corn.springcloud.start.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.segments.MergeSegments;
+import com.corn.springcloud.start.user.dto.UserDtoV2;
 import com.corn.springcloud.start.user.dto.UserLoginDTO;
 import com.corn.springcloud.start.user.entity.User;
 import com.corn.springcloud.start.user.mapper.UserMapper;
@@ -52,5 +53,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return saveUser;
         }
         return user;
+    }
+
+    @Override
+    public UserDtoV2 loadUserByUserName(String userName) {
+        return userMapper.loadUserByUserName(userName);
     }
 }

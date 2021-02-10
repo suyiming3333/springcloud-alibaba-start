@@ -1,7 +1,7 @@
 package com.corn.springcloud.authcenter.security.filter;
 
 import cn.hutool.json.JSONUtil;
-import com.corn.springcloud.authcenter.security.jwt.JwtTokenUtil;
+import com.corn.springcloud.start.utils.JwtTokenUtil;
 import org.springframework.security.authentication.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;

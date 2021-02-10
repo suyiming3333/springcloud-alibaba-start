@@ -29,4 +29,8 @@
         from tb_user where wx_id = #{wxId}
     </select>
 
+    <select id="loadUserByUserName" resultType="com.corn.springcloud.start.user.dto.UserDtoV2">
+        select * from t_user t where t.username = #{userName}
+    </select>
+
 </mapper>

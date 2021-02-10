@@ -118,6 +118,12 @@ public class UserController implements UserServiceInterface {
 
     }
 
+    @Override
+    @GetMapping("/loadUserByUserName/{userName}")
+    public UserDtoV2 loadUserByUserName(@PathVariable String userName) {
+        return userService.loadUserByUserName(userName);
+    }
+
 
     @PostMapping("/login")
     public LoginRespDTO login(@RequestBody UserLoginDTO loginDTO) throws WxErrorException {
