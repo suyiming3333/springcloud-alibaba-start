@@ -8,3 +8,23 @@ spring:
       server-addr: 127.0.0.1:8848
       discovery:
         namespace: 73be76f5-5fe5-4028-9fc5-d03c169a3cf8
+
+
+feign:
+  client:
+    config:
+      #全局配置
+      default:
+        loggerLevel: BASIC
+        ##feign拦截器
+        requestInterceptors:
+          - com.corn.springcloud.start.openresoucecenter.feignclient.TokenRelayRequestInterceptor
+      ##针对特定的client设置日志级别
+      user-service:
+        loggerLevel: FULL
+  httpclient:
+    enabled: true
+    # feign 最大连接数
+    max-connections: 200
+    # feign 单个路径(mapping)的最大连接数
+    max-connections-per-route: 1

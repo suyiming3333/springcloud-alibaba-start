@@ -76,8 +76,8 @@ public class UserController implements UserServiceInterface {
     @Override
     @GetMapping("/{id}")
 //    @CheckLogin
-    @RolesAllowed("admin")
-    @PreAuthorize("hasAnyAuthority('teacher','student')")
+//    @RolesAllowed("admin")
+//    @PreAuthorize("hasAnyAuthority('teacher','student')")
     public UserDto findById(@PathVariable Integer id){
         User user = userService.getById(id);
         UserDto userDto = new UserDto();

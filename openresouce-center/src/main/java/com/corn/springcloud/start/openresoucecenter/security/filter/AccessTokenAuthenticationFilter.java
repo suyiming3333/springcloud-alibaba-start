@@ -4,6 +4,7 @@ import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.corn.springcloud.start.openresoucecenter.security.jwt.JwtTokenUtil;
 import com.corn.springcloud.start.user.entity.UserEntity;
 import com.corn.springcloud.start.utils.EncryptUtil;
 import io.micrometer.core.instrument.util.StringUtils;
@@ -43,6 +44,9 @@ public class AccessTokenAuthenticationFilter extends OncePerRequestFilter {
             authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
             //将authenticationToken填充到安全上下文(security登录)
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+            //设置用于访问内部service的jwttoken
+            String jwttoken = JwtTokenUtil.createToken(user.getUsername(), authorities.toString());
+            response.setHeader("token", JwtTokenUtil.TOKEN_PREFIX + token);
         }
         filterChain.doFilter(request,response);
     }

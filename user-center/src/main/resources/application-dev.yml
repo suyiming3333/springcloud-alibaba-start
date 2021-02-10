@@ -38,14 +38,14 @@ spring:
         metadata:
           version: v1
     ##cloud stream的配置
-    stream:
-      rocketmq:
-        binder:
-          name-server: 127.0.0.1:9876
-      bindings:
-        input:
-          destination: stream-test-topic
-          group: binding-group
+#    stream:
+#      rocketmq:
+#        binder:
+#          name-server: 127.0.0.1:9876
+#      bindings:
+#        input:
+#          destination: stream-test-topic
+#          group: binding-group
 server:
   port: 8081
 
