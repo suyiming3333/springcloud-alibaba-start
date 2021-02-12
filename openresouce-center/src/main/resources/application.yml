@@ -5,7 +5,7 @@ spring:
     name: openresource-center
   cloud:
     nacos:
-      server-addr: 127.0.0.1:8848
+      server-addr: 47.112.246.25:9488
       discovery:
         namespace: 73be76f5-5fe5-4028-9fc5-d03c169a3cf8
 

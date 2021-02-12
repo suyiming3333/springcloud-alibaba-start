@@ -18,6 +18,7 @@ public class TokenRelayRequestInterceptor implements RequestInterceptor {
     public void apply(RequestTemplate requestTemplate) {
         String jwttoken = JwtTokenUtil.createToken("suyiming", "admin");
         //feign client调用是的认证参数
+        //todo 添加到缓存里，不用每一次都新创建一个token
         requestTemplate.header("Authorization","Bearer "+jwttoken);
     }
 }

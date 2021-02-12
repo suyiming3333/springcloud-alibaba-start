@@ -4,9 +4,9 @@ wx:
 
 spring:
   datasource:
-    username: root
-    password:
-    url: jdbc:mysql://127.0.0.1:3306/sc_user_center?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: corn
+    password: Corn#9527
+    url: jdbc:mysql://47.112.246.25:3936/sc_user_center?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       # 连接池最大连接数
@@ -31,7 +31,7 @@ spring:
       probability: 1.0
   cloud:
     nacos:
-      server-addr: 127.0.0.1:8848
+      server-addr: 47.112.246.25:9488
       discovery:
         namespace: 73be76f5-5fe5-4028-9fc5-d03c169a3cf8
         cluster-name: b-center
