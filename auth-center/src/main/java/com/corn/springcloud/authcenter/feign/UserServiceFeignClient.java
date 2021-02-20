@@ -6,7 +6,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 
 @FeignClient(
         name = "user-service",
-        path = "api/users")
+        path = "api/users",
+        fallbackFactory = UserServiceFeignClientFallBackFactory.class)
 public interface UserServiceFeignClient extends UserServiceInterface {
 
     /**

@@ -5,7 +5,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 
 @FeignClient(
         name = "resource-service",
-        path = "api/resource"
+        path = "api/resource",
+        fallbackFactory = ResourceServiceFeignClientFallBackFactory.class
 )
 public interface ResourceServiceFeignClient extends ResourceSerivceInterface {
 }

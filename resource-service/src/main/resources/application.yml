@@ -1,6 +1,13 @@
 server:
   port: 8021
 
+##actuator声明
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
 spring:
   datasource:
     username: corn
@@ -25,7 +32,11 @@ spring:
       server-addr: 47.112.246.25:9488
       discovery:
         namespace: 73be76f5-5fe5-4028-9fc5-d03c169a3cf8
-
+    ##sentinel配置
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
 
 #默认值可不设置
 #mybatis-plus:

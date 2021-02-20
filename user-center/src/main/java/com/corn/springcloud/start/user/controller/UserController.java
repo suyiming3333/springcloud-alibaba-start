@@ -3,11 +3,14 @@ package com.corn.springcloud.start.user.controller;
 
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.corn.springcloud.start.security.auth.CheckLogin;
 import com.corn.springcloud.start.user.dto.*;
 import com.corn.springcloud.start.user.api.UserServiceInterface;
 import com.corn.springcloud.start.user.entity.BonusEventLog;
 import com.corn.springcloud.start.user.entity.User;
+import com.corn.springcloud.start.user.sentinel.LoadUserByUserNameBlockHandlerClass;
+import com.corn.springcloud.start.user.sentinel.LoadUserByUserNameFallbackClass;
 import com.corn.springcloud.start.user.service.BonusEventLogService;
 import com.corn.springcloud.start.user.service.UserService;
 import com.corn.springcloud.start.utils.JwtOperator;
@@ -125,9 +128,18 @@ public class UserController implements UserServiceInterface {
 
     @Override
     @GetMapping("/loadUserByUserName/{userName}")
+    @SentinelResource(
+            value = "loadUserByUserName",
+            blockHandler = "block",
+            blockHandlerClass = LoadUserByUserNameBlockHandlerClass.class,
+            fallbackClass = LoadUserByUserNameFallbackClass.class,
+            fallback = "fallback")
     public UserDtoV2 loadUserByUserName(@PathVariable String userName) {
         System.out.println("user-service invoked");
         System.out.println(environment.getProperty("local.server.port"));
+//        if("13265905397".equals(userName)){
+//            throw new RuntimeException("error");
+//        }
         return userService.loadUserByUserName(userName);
     }
 
