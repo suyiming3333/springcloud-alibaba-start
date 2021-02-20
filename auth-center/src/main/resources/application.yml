@@ -1,6 +1,12 @@
 server:
   port: 8111
 
+##actuator暴露所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 spring:
   datasource:
     username: corn
@@ -25,10 +31,19 @@ spring:
       server-addr: 47.112.246.25:9488
       discovery:
         namespace: 73be76f5-5fe5-4028-9fc5-d03c169a3cf8
+    sentinel:
+      #打开/关闭掉对Spring MVC端点的保护
+      filter:
+        enabled: true
+      transport:
+        port: 8719
+        dashboard: localhost:8080
 ##负载均衡配置
 #user-service:
 #  ribbon:
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+##feignClient相关配置
 feign:
   client:
     config:

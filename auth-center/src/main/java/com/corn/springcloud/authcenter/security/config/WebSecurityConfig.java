@@ -52,7 +52,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .failureHandler(failureHandler).permitAll().and()
                 .logout().logoutSuccessHandler(logoutHandler).and()
                 .authorizeRequests()
-                .antMatchers("/api/login").permitAll()
+                .antMatchers("/api/login","/test/*","/actuator/*").permitAll()
                 .anyRequest().authenticated()/**所有请求都需要认证才能访问**/
                 .and()
                 .addFilter(new MyAuthenticationFilter(authenticationManager()))/**设置身份认证过滤器**/
