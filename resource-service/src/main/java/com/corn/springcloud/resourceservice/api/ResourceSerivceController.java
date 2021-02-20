@@ -5,6 +5,7 @@ import com.corn.springcloud.start.resources.api.ResourceSerivceInterface;
 import com.corn.springcloud.start.resources.dto.PermissionDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,10 +21,15 @@ public class ResourceSerivceController implements ResourceSerivceInterface {
     @Autowired
     private PermissionService permissionService;
 
+    @Autowired
+    Environment environment;
+
     @Override
     @GetMapping("/permissions/{id}")
     public List<PermissionDto> getPermissionByUserId(@PathVariable Integer id) {
         List<PermissionDto> permissionDtos = permissionService.getPermissionByUserId(id);
+        System.out.println("resource-service invoked");
+        System.out.println(environment.getProperty("local.server.port"));
         return permissionDtos;
     }
 }

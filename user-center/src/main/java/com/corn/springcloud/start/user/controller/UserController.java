@@ -18,6 +18,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.core.env.Environment;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -64,6 +65,9 @@ public class UserController implements UserServiceInterface {
     @Value("${last-name}")
     private String lastName;
 
+    @Autowired
+    Environment environment;
+
 
     @RequestMapping(value = "/test")
     public String hello(){
@@ -83,6 +87,7 @@ public class UserController implements UserServiceInterface {
         UserDto userDto = new UserDto();
         BeanUtils.copyProperties(user,userDto);
         System.out.println("user-service invoked");
+        System.out.println(environment.getProperty("local.server.port"));
         return userDto;
     }
 
@@ -121,6 +126,8 @@ public class UserController implements UserServiceInterface {
     @Override
     @GetMapping("/loadUserByUserName/{userName}")
     public UserDtoV2 loadUserByUserName(@PathVariable String userName) {
+        System.out.println("user-service invoked");
+        System.out.println(environment.getProperty("local.server.port"));
         return userService.loadUserByUserName(userName);
     }
 

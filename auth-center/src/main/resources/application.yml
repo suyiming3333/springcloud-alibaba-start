@@ -25,7 +25,10 @@ spring:
       server-addr: 47.112.246.25:9488
       discovery:
         namespace: 73be76f5-5fe5-4028-9fc5-d03c169a3cf8
-
+##负载均衡配置
+#user-service:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 feign:
   client:
     config:
