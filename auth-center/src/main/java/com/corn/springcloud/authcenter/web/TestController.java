@@ -5,6 +5,8 @@ import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.util.StringUtil;
 import com.corn.springcloud.authcenter.sentinel.BlockHandlerClass;
 import com.corn.springcloud.authcenter.sentinel.FallbackClass;
+import org.checkerframework.checker.units.qual.A;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,11 +17,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/test")
 public class TestController {
 
+    @Autowired
+    private TestBusinessServiceImpl testBusinessServiceImpl;
+
     @RequestMapping(value = "/test")
     @ResponseBody
     public String hello(){
         System.out.println("weather:");
         System.out.println("name:");
+        testBusinessServiceImpl.seataTestATmode();
         return "good weather";
     }
 

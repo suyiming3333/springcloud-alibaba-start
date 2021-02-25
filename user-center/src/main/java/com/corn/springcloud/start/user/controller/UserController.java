@@ -86,9 +86,9 @@ public class UserController implements UserServiceInterface {
 //    @RolesAllowed("admin")
 //    @PreAuthorize("hasAnyAuthority('teacher','student')")
     public UserDto findById(@PathVariable Integer id){
-        User user = userService.getById(id);
+//        User user = userService.getById(id);
         UserDto userDto = new UserDto();
-        BeanUtils.copyProperties(user,userDto);
+//        BeanUtils.copyProperties(user,userDto);
         System.out.println("user-service invoked");
         System.out.println(environment.getProperty("local.server.port"));
         return userDto;
@@ -143,6 +143,13 @@ public class UserController implements UserServiceInterface {
         return userService.loadUserByUserName(userName);
     }
 
+    @Override
+    @PostMapping("/addUser")
+    public void addUser(@RequestBody UserDtoV2 userDtoV2) {
+        userService.addUser(userDtoV2);
+        System.out.println("addd user");
+    }
+
 
     @PostMapping("/login")
     public LoginRespDTO login(@RequestBody UserLoginDTO loginDTO) throws WxErrorException {
@@ -191,18 +198,18 @@ public class UserController implements UserServiceInterface {
                 .build();
     }
 
-    @GetMapping("/me")
-    @CheckLogin
-    public UserRespDTO me(HttpServletRequest request){
-        Integer userId = (Integer) request.getAttribute("id");
-        User user = userService.getById(userId);
-        return UserRespDTO.builder()
-                .id(user.getId())
-                .avatarUrl(user.getAvatarUrl())
-                .bonus(user.getBonus())
-                .wxNickname(user.getWxNickname())
-                .build();
-    }
+//    @GetMapping("/me")
+////    @CheckLogin
+////    public UserRespDTO me(HttpServletRequest request){
+////        Integer userId = (Integer) request.getAttribute("id");
+////        User user = userService.getById(userId);
+////        return UserRespDTO.builder()
+////                .id(user.getId())
+////                .avatarUrl(user.getAvatarUrl())
+////                .bonus(user.getBonus())
+////                .wxNickname(user.getWxNickname())
+////                .build();
+////    }
 }
 
 

@@ -15,4 +15,7 @@ public interface UserServiceInterface {
 
     @GetMapping("/loadUserByUserName/{userName}")
     UserDtoV2 loadUserByUserName(@PathVariable("userName") String userName);
+
+    @PostMapping("/addUser")
+    void addUser(@RequestBody UserDtoV2 userDtoV2);
 }

@@ -64,6 +64,11 @@
             <artifactId>velocity-engine-core</artifactId>
         </dependency>
         <!--mybatis plus依赖 end-->
+        <!-- seata-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

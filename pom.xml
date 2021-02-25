@@ -47,6 +47,7 @@
     <jjwt.version>0.10.7</jjwt.version>
     <fastjson.version>1.2.75</fastjson.version>
     <hutool.version>5.4.2</hutool.version>
+    <seata.version>1.4.1</seata.version>
   </properties>
 
   <dependencyManagement>
@@ -132,6 +133,11 @@
             <artifactId>junit-vintage-engine</artifactId>
           </exclusion>
         </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+        <version>${spring-cloud-alibaba.version}</version>
       </dependency>
       <!--JWT依赖管理-->
       <dependency>

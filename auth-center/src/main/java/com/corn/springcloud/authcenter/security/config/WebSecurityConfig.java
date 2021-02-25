@@ -3,7 +3,7 @@ package com.corn.springcloud.authcenter.security.config;
 import com.corn.springcloud.authcenter.security.filter.MyAuthenticationEntryPoint;
 import com.corn.springcloud.authcenter.security.filter.MyAuthenticationFilter;
 import com.corn.springcloud.authcenter.security.filter.MyJwtAuthorizationFilter;
-import com.corn.springcloud.authcenter.security.handler.FailureHandler;
+import com.corn.springcloud.authcenter.security.handler.AuthFailureHandler;
 import com.corn.springcloud.authcenter.security.handler.LogoutHandler;
 import com.corn.springcloud.authcenter.security.handler.SuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private SuccessHandler successHandler;
 
     @Autowired
-    private FailureHandler failureHandler;
+    private AuthFailureHandler authFailureHandler;
 
     @Autowired
     private LogoutHandler logoutHandler;
@@ -49,7 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .loginProcessingUrl("/login").permitAll()
                 .successHandler(successHandler).permitAll()
-                .failureHandler(failureHandler).permitAll().and()
+                .failureHandler(authFailureHandler).permitAll().and()
                 .logout().logoutSuccessHandler(logoutHandler).and()
                 .authorizeRequests()
                 .antMatchers("/api/login","/test/*","/actuator/*").permitAll()

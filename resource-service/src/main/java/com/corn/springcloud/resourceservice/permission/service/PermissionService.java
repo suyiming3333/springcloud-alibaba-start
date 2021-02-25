@@ -3,6 +3,7 @@ package com.corn.springcloud.resourceservice.permission.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.corn.springcloud.resourceservice.permission.entity.Permission;
 import com.corn.springcloud.start.resources.dto.PermissionDto;
+import org.springframework.web.bind.annotation.RequestBody;
 
 
 import java.util.List;
@@ -18,5 +19,7 @@ import java.util.List;
 public interface PermissionService extends IService<Permission> {
 
     List<PermissionDto> getPermissionByUserId(Integer userId);
+
+    void addPermission(PermissionDto permissionDto);
 
 }

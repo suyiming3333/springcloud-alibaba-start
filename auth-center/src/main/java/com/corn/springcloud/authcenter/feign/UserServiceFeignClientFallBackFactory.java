@@ -34,6 +34,11 @@ public class UserServiceFeignClientFallBackFactory implements FallbackFactory<Us
                 u.setUsername("13265905399");
                 return u;
             }
+
+            @Override
+            public void addUser(UserDtoV2 userDtoV2) {
+
+            }
         };
     }
 }

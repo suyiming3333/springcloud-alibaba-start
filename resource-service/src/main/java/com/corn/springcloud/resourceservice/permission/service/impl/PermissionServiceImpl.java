@@ -28,4 +28,13 @@ public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permiss
     public List<PermissionDto> getPermissionByUserId(Integer userId) {
         return permissionMapper.getPermissionByUserId(userId);
     }
+
+    @Override
+    public void addPermission(PermissionDto permissionDto) {
+        Permission permission = new Permission();
+        permission.setCode("10086");
+        permission.setDescription("test at");
+        permission.setUrl("wwww.10086.com");
+        permissionMapper.insert(permission);
+    }
 }

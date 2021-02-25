@@ -20,6 +20,11 @@ public class ResourceServiceFeignClientFallBackFactory implements FallbackFactor
             public List<PermissionDto> getPermissionByUserId(Integer id) {
                 return new ArrayList<>();
             }
+
+            @Override
+            public void addPermission(PermissionDto permissionDto) {
+
+            }
         };
     }
 }

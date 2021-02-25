@@ -9,10 +9,7 @@ import com.corn.springcloud.start.resources.dto.PermissionDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -52,5 +49,12 @@ public class ResourceSerivceController implements ResourceSerivceInterface {
 //            throw new RuntimeException("error");
 //        }
         return permissionDtos;
+    }
+
+    @Override
+    @PostMapping("/addPermission")
+    public void addPermission(@RequestBody PermissionDto permissionDto) {
+        permissionService.addPermission(permissionDto);
+        System.out.println("add permission");
     }
 }
