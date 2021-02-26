@@ -18,4 +18,9 @@ public interface ResourceSerivceInterface {
 
     @PostMapping("/addPermission")
     void addPermission(@RequestBody PermissionDto permissionDto);
+
+    @PostMapping("/addPermissionByTcc")
+    void addPermissionByTcc(@RequestBody PermissionDto permissionDto);
+
+
 }

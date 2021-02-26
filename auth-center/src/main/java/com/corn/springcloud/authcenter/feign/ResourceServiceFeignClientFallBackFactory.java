@@ -25,6 +25,11 @@ public class ResourceServiceFeignClientFallBackFactory implements FallbackFactor
             public void addPermission(PermissionDto permissionDto) {
 
             }
+
+            @Override
+            public void addPermissionByTcc(PermissionDto permissionDto) {
+
+            }
         };
     }
 }

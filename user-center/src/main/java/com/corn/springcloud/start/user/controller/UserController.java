@@ -12,6 +12,7 @@ import com.corn.springcloud.start.user.entity.User;
 import com.corn.springcloud.start.user.sentinel.LoadUserByUserNameBlockHandlerClass;
 import com.corn.springcloud.start.user.sentinel.LoadUserByUserNameFallbackClass;
 import com.corn.springcloud.start.user.service.BonusEventLogService;
+import com.corn.springcloud.start.user.service.UserApi;
 import com.corn.springcloud.start.user.service.UserService;
 import com.corn.springcloud.start.utils.JwtOperator;
 import lombok.Getter;
@@ -49,6 +50,9 @@ public class UserController implements UserServiceInterface {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private UserApi userApi;
 
     @Autowired
     private WxMaService wxMaService;
@@ -148,6 +152,13 @@ public class UserController implements UserServiceInterface {
     public void addUser(@RequestBody UserDtoV2 userDtoV2) {
         userService.addUser(userDtoV2);
         System.out.println("addd user");
+    }
+
+    @Override
+    @PostMapping("/addUserByTcc")
+    public void addUserByTcc(@RequestBody UserDtoV2 userDtoV2) {
+        userApi.beforeAddUser(userDtoV2);
+        System.out.println("add User By Tcc");
     }
 
 

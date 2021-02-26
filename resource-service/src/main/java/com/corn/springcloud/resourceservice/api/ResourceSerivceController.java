@@ -4,9 +4,11 @@ import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.corn.springcloud.resourceservice.permission.service.PermissionService;
 import com.corn.springcloud.resourceservice.sentinel.PermissionsByIdBlockHandlerClass;
 import com.corn.springcloud.resourceservice.sentinel.PermissionsByIdFallbackClass;
+import com.corn.springcloud.resourceservice.service.ResourceApi;
 import com.corn.springcloud.start.resources.api.ResourceSerivceInterface;
 import com.corn.springcloud.start.resources.dto.PermissionDto;
 import lombok.extern.slf4j.Slf4j;
+import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +22,9 @@ public class ResourceSerivceController implements ResourceSerivceInterface {
 
     @Autowired
     private PermissionService permissionService;
+
+    @Autowired
+    private ResourceApi resourceApi;
 
     @Autowired
     Environment environment;
@@ -55,6 +60,13 @@ public class ResourceSerivceController implements ResourceSerivceInterface {
     @PostMapping("/addPermission")
     public void addPermission(@RequestBody PermissionDto permissionDto) {
         permissionService.addPermission(permissionDto);
+        System.out.println("add permission");
+    }
+
+    @Override
+    @PostMapping("/addPermissionByTcc")
+    public void addPermissionByTcc(@RequestBody PermissionDto permissionDto) {
+        resourceApi.beforeAddPermission(permissionDto);
         System.out.println("add permission");
     }
 }

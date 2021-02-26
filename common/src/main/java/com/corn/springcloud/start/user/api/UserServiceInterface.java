@@ -18,4 +18,7 @@ public interface UserServiceInterface {
 
     @PostMapping("/addUser")
     void addUser(@RequestBody UserDtoV2 userDtoV2);
+
+    @PostMapping("/addUserByTcc")
+    void addUserByTcc(@RequestBody UserDtoV2 userDtoV2);
 }

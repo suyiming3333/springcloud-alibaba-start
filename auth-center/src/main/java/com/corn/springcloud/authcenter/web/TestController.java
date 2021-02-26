@@ -25,8 +25,28 @@ public class TestController {
     public String hello(){
         System.out.println("weather:");
         System.out.println("name:");
-        testBusinessServiceImpl.seataTestATmode();
         return "good weather";
+    }
+
+
+    /***
+     * 测试seata AT模式分布式事务
+     * @return
+     */
+    @RequestMapping(value = "/testATmode")
+    @ResponseBody
+    public String testATmode(){
+        System.out.println("testATmode:");
+        testBusinessServiceImpl.seataTestATmode();
+        return "testATmode FINISH";
+    }
+
+    @RequestMapping(value = "/testTCCmode")
+    @ResponseBody
+    public String testTCCmode(){
+        System.out.println("testTCCmode:");
+        testBusinessServiceImpl.seataTestTCCmode();
+        return "testTCCmode FINISH";
     }
 
     /***

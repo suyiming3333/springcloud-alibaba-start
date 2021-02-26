@@ -39,6 +39,11 @@ public class UserServiceFeignClientFallBackFactory implements FallbackFactory<Us
             public void addUser(UserDtoV2 userDtoV2) {
 
             }
+
+            @Override
+            public void addUserByTcc(UserDtoV2 userDtoV2) {
+
+            }
         };
     }
 }
