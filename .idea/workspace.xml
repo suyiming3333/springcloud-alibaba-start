@@ -2,31 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99f09f3e-860f-4fe5-ab07-eff66c2c938a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/user-center/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-center/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-center/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/feign/ResourceServiceFeignClientFallBackFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/feign/ResourceServiceFeignClientFallBackFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/feign/UserServiceFeignClientFallBackFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/feign/UserServiceFeignClientFallBackFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/security/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/security/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/security/handler/FailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/security/handler/AuthFailureHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/web/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/web/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-center/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-center/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/corn/springcloud/start/resources/api/ResourceSerivceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/corn/springcloud/start/resources/api/ResourceSerivceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/corn/springcloud/start/user/api/UserServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/corn/springcloud/start/user/api/UserServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/web/TestBusinessServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/web/TestBusinessServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-center/src/main/resources/file.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-center/src/main/resources/registry.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/config/LocalDateTimeSerializerConfig$LocalDateTimeDeserializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/config/LocalDateTimeSerializerConfig$LocalDateTimeDeserializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/config/LocalDateTimeSerializerConfig$LocalDateTimeSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/config/LocalDateTimeSerializerConfig$LocalDateTimeSerializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/config/LocalDateTimeSerializerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/config/LocalDateTimeSerializerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/enums/AuditStatusEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/enums/AuditStatusEnum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/resources/api/ResourceSerivceInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/resources/api/ResourceSerivceInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/resources/dto/PermissionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/resources/dto/PermissionDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/security/auth/AuthAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/security/auth/AuthAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/security/auth/ErrorBody$ErrorBodyBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/security/auth/ErrorBody$ErrorBodyBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/security/auth/ErrorBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/security/auth/ErrorBody.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/security/auth/GlobalExceptionErrorHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/security/auth/GlobalExceptionErrorHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/share/dto/ShareAuditDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/share/dto/ShareAuditDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/share/dto/ShareContributeDto$ShareContributeDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/share/dto/ShareContributeDto$ShareContributeDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/share/dto/ShareContributeDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/share/dto/ShareContributeDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/share/dto/ShareDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/share/dto/ShareDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/api/UserServiceInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/api/UserServiceInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/JwtTokenRespDTO$JwtTokenRespDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/JwtTokenRespDTO$JwtTokenRespDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/JwtTokenRespDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/JwtTokenRespDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/LoginRespDTO$LoginRespDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/LoginRespDTO$LoginRespDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/LoginRespDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/LoginRespDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserAddBonseDTO$UserAddBonseDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserAddBonseDTO$UserAddBonseDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserAddBonseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserAddBonseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserAddBonusMsgDTO$UserAddBonusMsgDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserAddBonusMsgDTO$UserAddBonusMsgDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserAddBonusMsgDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserAddBonusMsgDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserDtoV2.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserDtoV2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserLoginDTO$UserLoginDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserLoginDTO$UserLoginDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserLoginDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserLoginDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserRespDTO$UserRespDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserRespDTO$UserRespDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserRespDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/dto/UserRespDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/user/entity/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/utils/EncryptUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/utils/EncryptUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/utils/JwtOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/utils/JwtOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/utils/JwtTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/corn/springcloud/start/utils/JwtTokenUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/corn/springcloud/resourceservice/api/ResourceSerivceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/corn/springcloud/resourceservice/api/ResourceSerivceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/corn/springcloud/resourceservice/permission/service/PermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/corn/springcloud/resourceservice/permission/service/PermissionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/corn/springcloud/resourceservice/permission/service/impl/PermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/corn/springcloud/resourceservice/permission/service/impl/PermissionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-center/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-center/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/resources/file.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/resources/registry.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/resources/file.conf" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/resources/file.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/resources/registry.conf" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/resources/registry.conf" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/user-center/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/openresouce-center/target/" />
+    <ignored path="$PROJECT_DIR$/gateway/target/" />
+    <ignored path="$PROJECT_DIR$/share-center/target/" />
+    <ignored path="$PROJECT_DIR$/auth-center/target/" />
+    <ignored path="$PROJECT_DIR$/resource-service/target/" />
+    <ignored path="$PROJECT_DIR$/common/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +76,133 @@
     <expand />
     <select />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1495635075">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="conf" value="9" />
+          <entry key="gitignore" value="1" />
+          <entry key="java" value="10" />
+          <entry key="pom" value="1" />
+          <entry key="properties" value="2" />
+          <entry key="xml" value="3" />
+          <entry key="yml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="10" />
+          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="Properties" value="2" />
+          <entry key="XML" value="4" />
+          <entry key="YAML" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="conf" value="63" />
+          <entry key="properties" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="63" />
+          <entry key="Properties" value="21" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-center/src/main/resources/file.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-center/src/main/resources/registry.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/AuthCenterApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resource-service/src/main/java/com/corn/springcloud/resourceservice/ResourceServiceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/UserCenterApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-center/src/main/resources/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-center/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/web/TestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/web/TestBusinessServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -55,6 +212,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>s</find>
+      <find>sentinel</find>
+      <find>seata</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -62,9 +226,28 @@
     <setting file="file://$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/service/impl/ShareServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/controller/ShareController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/user/service/impl/UserServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/rocketmq/AddBonusTransactionListener.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/security/config/TokenConfig.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/security/config/AuthorizationServer.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/rocketmq/AddBonusTransactionListener.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/auth-center/src/main/resources/file.conf" />
+        <option value="$PROJECT_DIR$/resource-service/src/main/resources/file.conf" />
+        <option value="$PROJECT_DIR$/user-center/src/main/resources/config.properties" />
+        <option value="$PROJECT_DIR$/user-center/src/main/resources/file.conf" />
+        <option value="$PROJECT_DIR$/user-center/src/main/resources/registry.conf" />
+        <option value="$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/web/TestBusinessServiceImpl.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -74,8 +257,76 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="user-center" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="user-center" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1608" />
+    <option name="y" value="-70" />
+    <option name="width" value="1616" />
+    <option name="height" value="886" />
+  </component>
   <component name="ProjectId" id="1iiy9LqbbVfvVy8rDRbig2zRJ9U" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="spring-cloud-alibaba-start" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud-alibaba-start" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-alibaba-start" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud-alibaba-start" type="462c0819:PsiDirectoryNode" />
+              <item name="user-center" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-alibaba-start" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud-alibaba-start" type="462c0819:PsiDirectoryNode" />
+              <item name="user-center" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-alibaba-start" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud-alibaba-start" type="462c0819:PsiDirectoryNode" />
+              <item name="user-center" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-alibaba-start" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud-alibaba-start" type="462c0819:PsiDirectoryNode" />
+              <item name="user-center" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -92,11 +343,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1614316543364" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resource-service/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -110,11 +362,11 @@
       <recent name="ribbonconfiguration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\gitcode\springcloud-alibaba-start\user-center\src\main\resources" />
       <recent name="D:\work\gitCode\springcloud-alibaba-start\resource-service\src\main\resources" />
       <recent name="D:\work\gitCode\springcloud-alibaba-start\user-center\src\main\resources" />
       <recent name="D:\work\gitCode\springcloud-alibaba-start\auth-center\src\main\resources" />
       <recent name="D:\work\gitCode\springcloud-alibaba-start\user-center\src\main\resources\sql" />
-      <recent name="D:\work\gitCode\springcloud-alibaba-start\user-center\src\main\java\com\corn\springcloud\start\user\sentinel" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -131,7 +383,19 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthCenterApplication">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.UserCenterApplication">
     <configuration name="AuthCenterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="auth-center" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.corn.springcloud.authcenter.AuthCenterApplication" />
@@ -254,8 +518,92 @@
       <workItem from="1613783219201" duration="24629000" />
       <workItem from="1614171497060" duration="472000" />
       <workItem from="1614258298327" duration="11081000" />
+      <workItem from="1614304797593" duration="8460000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8460000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1608" y="-70" width="1616" height="886" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Capture Tool" />
+      <window_info id="Web" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23586118" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Statistic" />
+      <window_info anchor="bottom" id="SonarLint" />
+      <window_info anchor="bottom" id="Run with VisualVM" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="MyBatis Log" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Debug with VisualVM" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.086551264" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="RestServices" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Maven Projects" weight="0.32995737" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.25" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Statistic" order="3" />
+      <window_info anchor="bottom" id="SonarLint" order="4" />
+      <window_info anchor="bottom" id="Java Enterprise" order="5" />
+      <window_info anchor="bottom" id="Database Changes" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Message" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" />
+      <window_info anchor="bottom" id="Run" order="10" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Maven Projects" order="2" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="RestServices" order="6" />
+      <window_info anchor="right" id="Bean Validation" order="7" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -266,7 +614,12 @@
         <entry key="1">
           <value>
             <State>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -285,6 +638,14 @@
                   </entry>
                 </map>
               </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
             </State>
           </value>
         </entry>
@@ -295,6 +656,9 @@
         <option value="1" />
       </set>
     </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614266736982">
@@ -393,87 +757,295 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/rocketmq/AddBonusListener.java</url>
           <line>28</line>
+          <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/rocketmq/AddBonusTransactionListener.java</url>
           <line>59</line>
+          <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/com/alibaba/cloud/spring-cloud-starter-stream-rocketmq/2.2.2.RELEASE/spring-cloud-starter-stream-rocketmq-2.2.2.RELEASE.jar!/com/alibaba/cloud/stream/binder/rocketmq/RocketMQMessageChannelBinder.class</url>
           <line>159</line>
+          <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/controller/ShareController.java</url>
           <line>173</line>
+          <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/share-center/src/main/java/com/corn/springcloud/start/share/controller/ShareController.java</url>
           <line>82</line>
+          <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/security/jwt/JwtTokenUtil.java</url>
           <line>89</line>
+          <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/gateway/src/main/java/com/corn/springcloud/gateway/start/jwt/JwtTokenUtil.java</url>
           <line>89</line>
+          <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/security/filter/AccessTokenAuthenticationFilter.java</url>
           <line>29</line>
+          <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/jwt/JwtTokenUtil.java</url>
           <line>89</line>
+          <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/openresouce-center/src/main/java/com/corn/springcloud/start/openresoucecenter/web/TestController.java</url>
           <line>22</line>
+          <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/common/src/main/java/com/corn/springcloud/start/utils/JwtTokenUtil.java</url>
           <line>89</line>
+          <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/security/service/UserDetailServiceImpl.java</url>
           <line>48</line>
+          <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/security/service/UserDetailServiceImpl.java</url>
           <line>42</line>
+          <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/feign/UserServiceFeignClientFallBackFactory.java</url>
           <line>30</line>
+          <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/resource-service/src/main/java/com/corn/springcloud/resourceservice/sentinel/PermissionsByIdFallbackClass.java</url>
           <line>10</line>
+          <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/web/TestBusinessServiceImpl.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="42" />
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/springcloud_alibaba_start$UserCenterApplication.ic" NAME="UserCenterApplication Coverage Results" MODIFIED="1613833928271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://E:/maven/repo/com/alibaba/cloud/spring-cloud-starter-alibaba-seata/2.2.2.RELEASE/spring-cloud-starter-alibaba-seata-2.2.2.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-center/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="125" column="48" lean-forward="true" selection-start-line="125" selection-start-column="48" selection-end-line="125" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="142" column="18" selection-start-line="142" selection-start-column="18" selection-end-line="142" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openresouce-center/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource-service/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth-center/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource-service/src/main/resources/file.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-center/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-center/src/main/resources/file.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth-center/src/main/resources/file.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth-center/src/main/resources/registry.conf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-center/src/main/resources/registry.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/AuthCenterApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource-service/src/main/java/com/corn/springcloud/resourceservice/ResourceServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-center/src/main/java/com/corn/springcloud/start/UserCenterApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-center/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/web/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth-center/src/main/java/com/corn/springcloud/authcenter/web/TestBusinessServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>auth-center</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

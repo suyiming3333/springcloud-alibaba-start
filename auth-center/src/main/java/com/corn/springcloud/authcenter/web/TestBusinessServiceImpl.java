@@ -27,7 +27,7 @@ public class TestBusinessServiceImpl {
         log.info("开始全局事务，XID = " + RootContext.getXID());
         resourceServiceFeignClient.addPermission(new PermissionDto());
         userServiceFeignClient.addUser(new UserDtoV2());
-        if (!flag) {
+        if (flag) {
             throw new RuntimeException("测试抛异常后，分布式事务回滚！");
         }
     }

@@ -134,11 +134,11 @@
           </exclusion>
         </exclusions>
       </dependency>
-      <dependency>
-        <groupId>com.alibaba.cloud</groupId>
-        <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
-        <version>${spring-cloud-alibaba.version}</version>
-      </dependency>
+      <!--<dependency>-->
+        <!--<groupId>com.alibaba.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter-alibaba-seata</artifactId>-->
+        <!--<version>${spring-cloud-alibaba.version}</version>-->
+      <!--</dependency>-->
       <!--JWT依赖管理-->
       <dependency>
         <groupId>io.jsonwebtoken</groupId>
