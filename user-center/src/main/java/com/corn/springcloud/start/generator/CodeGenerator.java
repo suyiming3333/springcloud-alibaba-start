@@ -43,14 +43,14 @@ public class CodeGenerator {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        String projectPath = "D:/work/gitCode/springcloud-alibaba-start/user-center";
+        String projectPath = "D:/work/gitCode/springcloud-alibaba-start/resource-service";
         gc.setActiveRecord(true)//开启AR模式
                 .setAuthor("suyiming3333")//设置作者
-                .setOutputDir("D:/work/gitCode/springcloud-alibaba-start/user-center/src/main/java")//生成路径(一般在此项目的src/main/java下)
+                .setOutputDir("D:/work/gitCode/springcloud-alibaba-start/resource-service/src/main/java")//生成路径(一般在此项目的src/main/java下)
                 .setFileOverride(true)//第二次生成会把第一次生成的覆盖掉
                 .setOpen(false)//生成完毕后是否自动打开输出目录
                 //.setSwagger2(true)//实体属性 Swagger2 注解
-                .setIdType(IdType.AUTO)//主键策略
+                .setIdType(IdType.UUID)//主键策略
                 .setServiceName("%sService")//生成的service接口名字首字母是否为I，这样设置就没有I
                 .setBaseResultMap(true)//生成resultMap
                 .setBaseColumnList(true);//在xml中生成基础列
@@ -58,17 +58,17 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/sc_user_center?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8");
+        dsc.setUrl("jdbc:mysql://47.112.246.25:3936/sc_resource_center?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-        dsc.setUsername("root");
-        dsc.setPassword("");
+        dsc.setUsername("corn");
+        dsc.setPassword("Corn#9527");
         mpg.setDataSource(dsc);
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName("user");
-        pc.setParent("com.corn.springcloud.usercenter");
+        pc.setModuleName("org");
+        pc.setParent("com.corn.springcloud.resourceservice");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -139,7 +139,7 @@ public class CodeGenerator {
 //        strategy.setSuperEntityColumns("id");
         strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
         strategy.setControllerMappingHyphenStyle(true);
-        strategy.setTablePrefix("tb_");//表前缀
+        strategy.setTablePrefix("t_");//表前缀
         mpg.setStrategy(strategy);
         mpg.setTemplateEngine(new VelocityTemplateEngine());
         mpg.execute();

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.corn.springcloud.resourceservice.org.mapper.OrganizationMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.corn.springcloud.resourceservice.org.entity.Organization">
+        <id column="id" property="id" />
+        <result column="org_name" property="orgName" />
+        <result column="org_code" property="orgCode" />
+        <result column="parent_id" property="parentId" />
+        <result column="creata_time" property="creataTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="org_type" property="orgType" />
+        <result column="remark" property="remark" />
+        <result column="display_order" property="displayOrder" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, org_name, org_code, parent_id, creata_time, update_time, org_type, remark, display_order
+    </sql>
+
+</mapper>
